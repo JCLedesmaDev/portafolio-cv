@@ -290,7 +290,7 @@ header nav .contenedor .menu.is-active {
 }
 /* Hero Image - Banner */
 .hero-image {
-  background-image: url("../static/hero-image-home.jpg");
+  background-image: url("/static/hero-image-home.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
