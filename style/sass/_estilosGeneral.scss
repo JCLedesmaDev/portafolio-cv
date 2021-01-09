@@ -1,0 +1,75 @@
+// Resetearemos la hoja de estilo por defecto
+/* Propiedades que tendra todo nuestro HTML */
+
+html{
+  box-sizing: border-box;
+  font-family: $font;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* Propiedades que tendra todos los elementos del HTML */
+*, 
+*::after, 
+*::before{
+  box-sizing: inherit;
+}
+
+/* Propiedades que tendra la etiqueta body */
+body{
+  margin: 0;
+  overflow-x: hidden;
+  color: $color-texto;
+}
+
+/* Propiedades que tendran exclusivamente los enlaces */
+a{
+  color: $color-enlaces;
+  transition: all .3s ease-out;
+  text-decoration: none;
+}
+a:hover{
+  opacity: 0.75;
+}
+
+/* Propiedades que tendran por defecto todos los H */
+h1{
+  font-size: 2rem;
+  margin: 0;
+}
+
+h2{
+  font-size: 1.5em;
+  margin: 0;
+}
+
+h3{
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+h4{
+  font-size: 1rem;
+  margin: 0;
+}
+
+h5{
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+h6{
+  font-size: 0.70rem;
+  margin: 0;
+}
+
+/* Propiedades para hacer las imagenes responsive */
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* Propiedades en comun para todos los parrafos*/
+p{
+  line-height: 1.6;
+}

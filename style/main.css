@@ -1,0 +1,340 @@
+@charset "UTF-8";
+/* Propiedades que tendra todo nuestro HTML */
+html {
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* Propiedades que tendra todos los elementos del HTML */
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/* Propiedades que tendra la etiqueta body */
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: #222;
+}
+
+/* Propiedades que tendran exclusivamente los enlaces */
+a {
+  color: #509ee3;
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+/* Propiedades que tendran por defecto todos los H */
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+h5 {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+h6 {
+  font-size: 0.7rem;
+  margin: 0;
+}
+
+/* Propiedades para hacer las imagenes responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Propiedades en comun para todos los parrafos*/
+p {
+  line-height: 1.6;
+}
+
+/* ********* Utilidades (Clases re utilizables) *********  */
+.btn {
+  /* Clase generica para los botones */
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: inline-block;
+  width: 12.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #dc143c;
+}
+
+.contenedor {
+  /* Clase generica para centrar elementos */
+  margin: auto;
+  max-width: 1200px;
+}
+
+.none {
+  /* Clase generica para desaparecer elementos */
+  display: none;
+}
+
+.section-space {
+  padding: 2rem 1rem;
+}
+
+.section-title {
+  border-top: thin solid #dc143c;
+  border-bottom: thin solid #dc143c;
+  width: 15rem;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  color: #333;
+}
+
+.article-space {
+  margin-bottom: 2rem;
+}
+
+.gray-scale {
+  /* Clase generica para darle escala de grises */
+  filter: grayscale(1);
+}
+
+/* Clases generica para alinear los elementos tanto normal como responsive */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media screen and (min-width: 1024px) {
+  .full-lg-screen {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .text-lg-center {
+    text-align: center;
+  }
+
+  .text-lg-left {
+    text-align: left;
+  }
+
+  .text-lg-right {
+    text-align: right;
+  }
+}
+.text-first-color {
+  color: var(--first-color);
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 9.5rem;
+  width: 9.5rem;
+}
+
+.bg-gray-light {
+  background-color: var(--gray-light-color);
+}
+
+.box-shadow-1 {
+  /* Clase generica para darle sombreado elementos */
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+header nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 1rem;
+}
+header nav.navModelo1, header nav.navModelo2 {
+  background-color: #14172d;
+  height: 4rem;
+}
+header nav .contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+header nav .contenedor .logo a {
+  color: #dc143c;
+  font-weight: bold;
+  font-size: 1.45rem;
+}
+header nav .contenedor .logo a span {
+  color: #fff;
+}
+header nav .contenedor .menu-btn {
+  background-color: #14172d;
+  outline: thin solid #dc143c;
+  border: none;
+  cursor: pointer;
+}
+header nav .contenedor .menu-btn i {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.25rem;
+  line-height: 1.5rem;
+}
+header nav .contenedor .menu {
+  position: fixed;
+  bottom: 4rem;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #14172d;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+header nav .contenedor .menu a {
+  padding: 1rem;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #ff6a00;
+  font-weight: 500;
+}
+header nav .contenedor .menu a:hover, header nav .contenedor .menu a.active {
+  color: #fff;
+  background-color: #dc143c;
+  font-weight: 600;
+}
+header nav .contenedor .menu.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    margin-top: 3.5rem;
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0.5rem;
+    height: 3.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.5);
+  }
+  header nav.navModelo1 {
+    background-color: transparent;
+    height: 4rem;
+  }
+  header nav .contenedor .menu-btn {
+    display: none;
+  }
+  header nav .contenedor .menu {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    background-color: transparent;
+    width: auto;
+    flex-direction: row;
+  }
+  header nav .contenedor .menu a {
+    padding: 0.5rem;
+    color: #fff;
+  }
+  header nav .contenedor .menu a:last-child {
+    padding-right: 0;
+  }
+  header nav.navModelo2 {
+    background-color: #14172d;
+    height: 4.6rem;
+  }
+  header nav.navModelo2 .contenedor .menu a {
+    color: #ff6a00;
+  }
+  header nav.navModelo2 .contenedor .menu a:hover, header nav.navModelo2 .contenedor .menu a.active {
+    color: #fff;
+    background-color: #dc143c;
+    font-weight: 600;
+  }
+}
+/* Hero Image - Banner */
+.hero-image {
+  background-image: url("/static/hero-image-home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-image-opacity {
+  width: 100%;
+  min-height: 105vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, #ff6a0074, rgba(29, 241, 171, 0.455), rgba(42, 162, 214, 0.638));
+  text-align: center;
+  margin-top: -4rem;
+}
+
+.hero-image-content {
+  width: 100%;
+  min-width: 320px;
+  height: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-image-content .hero-image-title {
+  color: #fff;
+  /*Para que el tamaño sea fluido y proporcional a todo tipo de medida, utilizamos el vw. Cada 1vw son 12px en full screen*/
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+.hero-image-content .hero-image-title span.span-1 {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 0.25rem;
+}
+.hero-image-content .hero-image-title span.span-2 {
+  color: #dc143c;
+  font-size: 1.75rem;
+}
+.hero-image-content a {
+  margin-top: 2rem;
+}
+
+/*# sourceMappingURL=main.css.map */
