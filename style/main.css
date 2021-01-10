@@ -151,8 +151,8 @@ p {
   }
 }
 .section-title {
-  border-top: thin solid #dc143c;
-  border-bottom: thin solid #dc143c;
+  border-top: 3px solid #dc143c;
+  border-bottom: 3px solid #dc143c;
   width: 15rem;
   text-align: center;
   margin: 2rem auto;
