@@ -1,66 +1,76 @@
 /* Hero Image - Banner */
 
-.hero-image{
+.home{
 
-  background-image: url('../static/hero-image-home.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  .hero-image{
 
-}
-
-.hero-image-opacity{
-  width: 100%;
-  min-height: 105vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
-  //background-color: $color-gris-opacidad;
-  background: linear-gradient(
-    to top, 
-    $color-naranja-degrade, 
-    $color-verde-degrade, 
-    $color-azulado-degrade);
-  text-align: center;
-  margin-top: -$header-nav-height;
-}
+    background-image: url('../static/hero-image-home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 
 
-.hero-image-content {
-  width: 100%;
-  min-width: 320px;
-  height: 16rem;
+    .hero-image-opacity{
+      width: 100%;
+      min-height: 105vh;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-
-  .hero-image-title{
-    color: $color-blanco;
-    /*Para que el tamaño sea fluido y proporcional a todo tipo de medida, utilizamos el vw. Cada 1vw son 12px en full screen*/
-    font-size: 1.5rem;
-    line-height: 3rem;
-
-    span.span-1{
-      font-size: 2rem;
-      letter-spacing: .1rem;
-      border-bottom: 2px solid #fff;
-      padding-bottom: .25rem;
-    }
-    span.span-2{
-      color: $color-principal;
-      font-size: 1.75rem;
-    }
+      display: flex;
+      justify-content: center;
+      align-items: center;
     
+      //background-color: $color-gris-opacidad;
+      background: linear-gradient(
+        to top, 
+        $color-naranja-degrade, 
+        $color-verde-degrade, 
+        $color-azulado-degrade);
+      text-align: center;
+      margin-top: -$header-nav-height;
+
+      .hero-image-content {
+        width: 100%;
+        min-width: 320px;
+        height: 16rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        .hero-image-title{
+          color: $color-blanco;
+          /*Para que el tamaño sea fluido y proporcional a todo tipo de medida, utilizamos el vw. Cada 1vw son 12px en full screen*/
+          font-size: 1.5rem;
+          line-height: 3rem;
+
+          span.span-1{
+            font-size: 2rem;
+            letter-spacing: .1rem;
+            border-bottom: 2px solid #fff;
+            padding-bottom: .25rem;
+          }
+          span.span-2{
+            color: $color-principal;
+            font-size: 1.75rem;
+          }
+          
+        }
+
+        a{
+          margin-top: 2rem;
+        }
+      }
+    }
   }
 
-  a{
-    margin-top: 2rem;
-  }
 }
+
+
+
+
+
+
+
 

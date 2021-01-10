@@ -293,15 +293,14 @@ header nav .contenedor .menu.is-active {
   }
 }
 /* Hero Image - Banner */
-.hero-image {
+.home .hero-image {
   background-image: url("../static/hero-image-home.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
-
-.hero-image-opacity {
+.home .hero-image .hero-image-opacity {
   width: 100%;
   min-height: 105vh;
   display: flex;
@@ -311,8 +310,7 @@ header nav .contenedor .menu.is-active {
   text-align: center;
   margin-top: -4rem;
 }
-
-.hero-image-content {
+.home .hero-image .hero-image-opacity .hero-image-content {
   width: 100%;
   min-width: 320px;
   height: 16rem;
@@ -321,23 +319,23 @@ header nav .contenedor .menu.is-active {
   justify-content: center;
   align-items: center;
 }
-.hero-image-content .hero-image-title {
+.home .hero-image .hero-image-opacity .hero-image-content .hero-image-title {
   color: #fff;
   /*Para que el tamaño sea fluido y proporcional a todo tipo de medida, utilizamos el vw. Cada 1vw son 12px en full screen*/
   font-size: 1.5rem;
   line-height: 3rem;
 }
-.hero-image-content .hero-image-title span.span-1 {
+.home .hero-image .hero-image-opacity .hero-image-content .hero-image-title span.span-1 {
   font-size: 2rem;
   letter-spacing: 0.1rem;
   border-bottom: 2px solid #fff;
   padding-bottom: 0.25rem;
 }
-.hero-image-content .hero-image-title span.span-2 {
+.home .hero-image .hero-image-opacity .hero-image-content .hero-image-title span.span-2 {
   color: #dc143c;
   font-size: 1.75rem;
 }
-.hero-image-content a {
+.home .hero-image .hero-image-opacity .hero-image-content a {
   margin-top: 2rem;
 }
 
