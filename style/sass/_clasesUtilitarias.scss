@@ -24,37 +24,22 @@
   padding: 2rem 1rem;
 }
 
-.section-title{
-  border-top: thin solid  $color-principal;
-  border-bottom: thin solid  $color-principal;
-  width: 15rem;
-  text-align: center;
-  margin: 2rem auto;
-  padding: .5rem 1rem;
-  color: $color-titulo;
-}
-
 .article-space{
   margin-bottom: 2rem;
 }
 
-
-
-
-
-
-
-.gray-scale{ /* Clase generica para darle escala de grises */
-  filter:grayscale(1) ;
+.text-color-principal{
+  color: $color-principal;
 }
 
+.gray-scale-img{
+  width: 90%;
+  filter:grayscale(1);
+}
 
-
-
-
-
-
-
+.padding-top{
+  padding-top: .3rem ;
+}
 
 /* Clases generica para alinear los elementos tanto normal como responsive */
 .text-center{
@@ -84,10 +69,19 @@
   }
 }
 
-.text-first-color{
-  color: var(--first-color);
-}
 
+
+
+
+.section-title{
+  border-top: thin solid  $color-principal;
+  border-bottom: thin solid  $color-principal;
+  width: 15rem;
+  text-align: center;
+  margin: 2rem auto;
+  padding: .5rem 1rem;
+  color: $color-titulo;
+} //Aun no utilizada
 
 .avatar{
   border-radius: 50%;

@@ -102,23 +102,21 @@ p {
   padding: 2rem 1rem;
 }
 
-.section-title {
-  border-top: thin solid #dc143c;
-  border-bottom: thin solid #dc143c;
-  width: 15rem;
-  text-align: center;
-  margin: 2rem auto;
-  padding: 0.5rem 1rem;
-  color: #333;
-}
-
 .article-space {
   margin-bottom: 2rem;
 }
 
-.gray-scale {
-  /* Clase generica para darle escala de grises */
+.text-color-principal {
+  color: #dc143c;
+}
+
+.gray-scale-img {
+  width: 90%;
   filter: grayscale(1);
+}
+
+.padding-top {
+  padding-top: 0.3rem;
 }
 
 /* Clases generica para alinear los elementos tanto normal como responsive */
@@ -152,8 +150,14 @@ p {
     text-align: right;
   }
 }
-.text-first-color {
-  color: var(--first-color);
+.section-title {
+  border-top: thin solid #dc143c;
+  border-bottom: thin solid #dc143c;
+  width: 15rem;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 0.5rem 1rem;
+  color: #333;
 }
 
 .avatar {
@@ -335,6 +339,78 @@ header nav .contenedor .menu.is-active {
 }
 .hero-image-content a {
   margin-top: 2rem;
+}
+
+main .about .titulo {
+  position: relative;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  padding-left: 0.35rem;
+  text-align: center;
+}
+main .about .titulo::after {
+  content: "¿Quien soy?";
+  position: absolute;
+  top: 1.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.25rem;
+  color: #dc143c;
+  padding: 0.5rem;
+  background: #fff;
+  text-align: center;
+}
+main .about .titulo::before {
+  content: "";
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12rem;
+  height: 0.2rem;
+  background-color: #333;
+}
+
+@media screen and (min-width: 1024px) {
+  main .about {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    justify-content: space-between;
+    align-content: center;
+  }
+  main .about h2.titulo {
+    grid-column: span 3;
+  }
+}
+/* Componente barra de progreso */
+.progress {
+  margin: 1.25rem auto;
+}
+
+.progress p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.15rem;
+}
+
+progress {
+  width: 100%;
+  height: 1rem;
+  background-color: #dc143c;
+}
+
+/* Definimos los colores en los distintos navegadores */
+progress::-webkit-progress-bar {
+  background-color: #ccc;
+}
+
+progress::-webkit-progress-value {
+  background-color: #dc143c;
 }
 
 /*# sourceMappingURL=main.css.map */
