@@ -347,9 +347,10 @@ main .about .titulo {
   font-size: 1.75rem;
   font-weight: 600;
   color: #333;
-  margin-bottom: 3rem;
-  padding-bottom: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
   padding-left: 0.35rem;
+  padding-bottom: 1rem;
   text-align: center;
 }
 main .about .titulo::after {

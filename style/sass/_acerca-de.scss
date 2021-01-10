@@ -1,40 +1,45 @@
 main .about .titulo{
 
-  position: relative;
-  text-align: center;
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: $color-titulo;
-  margin-bottom: 3rem;
-  padding-bottom: 1rem;
-  padding-left: .35rem;
-  text-align: center;
-  &::after{
-      content: "¿Quien soy?";
-      position: absolute;
-      top: 1.75rem;
-      left: 50%;
-      transform: translateX(-50%);
-      
-      font-size: 1.25rem;
-      color: $color-principal;
-      padding: .5rem;
-      background: $color-blanco;
-      text-align: center;
-  }
-  &::before{
-      content: "";
-      position: absolute;
-      top: 3rem;
-      left: 50%;
-      transform: translateX(-50%);
+    position: relative;
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: $color-titulo;
 
-      width: 12rem;
-      height: .2rem;
-      background-color: $color-titulo;
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+
+    padding-left: .35rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    
+    &::after{
+        content: "¿Quien soy?";
+        position: absolute;
+        top: 1.75rem;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        font-size: 1.25rem;
+        color: $color-principal;
+        padding: .5rem;
+        background: $color-blanco;
+        text-align: center;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        top: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 12rem;
+        height: .2rem;
+        background-color: $color-titulo;
+    }
+
   }
 
-}
 
 @media screen and (min-width: 1024px){
 
