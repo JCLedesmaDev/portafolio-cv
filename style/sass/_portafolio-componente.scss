@@ -155,3 +155,62 @@ main .modal .modal-content{
     }
   }
 }
+
+
+/* Media queries para tablet */
+@media screen and (min-width:768px){
+
+  // Portafolio en si:
+  main .portafolio .contenedor{
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-around;
+    align-items: center;
+
+    .section-title{
+      grid-column: span 2;
+    }
+  }
+
+  //Estilo del modal
+  main .modal .modal-content .portafolio-modal{
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    padding: 1rem 1rem;
+
+    display: flex;
+    flex-direction: row;
+
+    img{
+      width: 50%;
+      height: 100%;
+    }
+
+    .portafolio-info{
+      margin: 1rem;
+      align-self: center;
+
+      h3{
+        margin: 0;
+      }
+    }
+  }
+}
+
+/* Media queries para escritorio */
+@media screen and (min-width: 1024px){
+
+  // Portafolio en si:
+  main .portafolio .contenedor{
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    justify-content: space-around;
+    align-items: center;
+
+    .section-title{
+      grid-column: span 3;
+    }
+  }
+
+}
