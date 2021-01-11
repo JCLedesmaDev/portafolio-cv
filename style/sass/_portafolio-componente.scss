@@ -1,47 +1,99 @@
 // Portafolio en si:
 
-main .portafolio .portafolio-card{
-  position: relative;
-  width: 100%;
-  margin: 0.75rem auto;
-  display: block;
-  overflow: hidden;
+main .portafolio .contenedor{
 
-  img{
+  .portafolio-card{
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+    height: 21rem;
+    margin: 0.75rem auto;
+    display: block;
+    overflow: hidden;
 
-  .portafolio-card-info{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    background-color: $color-principal-opacidad;
-    color: $color-blanco;
-
-    opacity: 0;
-    pointer-events: none;
-    transform: translateX(100%);
-    transition: all .5s ease-in-out;
-
-    div{
-      padding: 1rem;
+    img{
+      object-fit: cover;
+      width: 100%;
       height: 100%;
-      border: 2px solid #fff;
-      border-radius: .25rem;
+    }
+
+    .portafolio-card-info{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      background-color: $color-principal-opacidad;
+      color: $color-blanco;
+
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(100%);
+      transition: all .5s ease-in-out;
+
+      div{
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        border: 2px solid #fff;
+        border-radius: .25rem;
+
+        display: flex;
+        flex-direction: column;
+
+        span{
+          width: 100%;
+          height: 100%;
+
+          display: flex;
+          align-items: flex-end;
+          
+        }
+      }
+    }
+
+    &:hover .portafolio-card-info{
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(0%);
     }
   }
+}
 
-  &:hover .portafolio-card-info{
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateX(0%);
+// Modal del portafolio:
+
+main .portafolio .modal{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 100vh;
+  background: $color-negro-opacidad;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  // opacity: 0;
+  // pointer-events: none;
+  // transform: scale(0);
+  transition: all 1s ease-in-out;
+
+  .modal-content{
+    position: relative;
+    width: 90%;
+
+    .modal-cerrar{
+      position: absolute;
+      top: -1.5rem;
+      right: 0rem;
+    }
   }
 }
