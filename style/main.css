@@ -516,10 +516,41 @@ main .modal .modal-content .portafolio-modal {
   display: flex;
   flex-direction: column;
 }
-main .modal .modal-content .portafolio-modal img {
+main .modal .modal-content .portafolio-modal .carrousel {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  overflow-x: scroll;
+}
+main .modal .modal-content .portafolio-modal .carrousel .slides {
+  /* Por cada carrusel que tengas, le debes agregar un 100% al width. COmo tenemos 4 slides, ponemos 400%*/
+  display: flex;
+  width: 400%;
+  height: 21rem;
+  transition: transform 0.5s ease-in-out;
+}
+main .modal .modal-content .portafolio-modal .carrousel .slides .slide img {
   width: 100%;
   height: 21rem;
   object-fit: cover;
+}
+main .modal .modal-content .portafolio-modal .carrousel-btns {
+  position: absolute;
+  top: 7.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 0 0.25rem;
+}
+main .modal .modal-content .portafolio-modal .carrousel-btns button {
+  font-size: 1.25rem;
+  border: 1px solid #14172d;
+  border-radius: 0.25rem;
+  padding: 0 0.25rem;
+  outline: none;
+  background-color: transparent;
+  color: #dc143c;
 }
 main .modal .modal-content .portafolio-modal .portafolio-info h3 {
   border-bottom: 3px solid #dc143c;
@@ -537,6 +568,9 @@ main .modal .modal-content .portafolio-modal .portafolio-info .portafolio-detail
   color: #dc143c;
 }
 
+@keyframes carousel-slide {
+  /* Comparte el mismo porcentaje que el comentario de abajo de DIVISION*/
+}
 /* Media queries para tablet */
 @media screen and (min-width: 768px) {
   main .portafolio .contenedor {

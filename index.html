@@ -15,7 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Hoja CSS -->
-  <link rel="stylesheet" href="style/main.css">
+  <!-- Cada vez que se suba a github, cambiar el 1.0.0 por el n° sig -->
+  <link rel="stylesheet" href="style/main.css?1.0.0">
 
 </head>
 
@@ -200,6 +201,7 @@
 
         <h2 class="section-title">Mis trabajos</h2>
 
+        <!-- Trabajos realizados -->
 
         <a href="#trabajo-1" class="portafolio-card">
 
@@ -250,7 +252,47 @@
 
           <article class="portafolio-modal">
 
-            <img src="static/crud-libros.jpg" alt="Trabajo 1">
+
+
+            <div class="carrousel">
+              <!-- Contenedor Carrousel-->
+
+              <div class="slides">
+                <!-- Carrousel-->
+
+                <div class="slide">
+                  <!-- Pelicula -->
+                  <img src="/static/crud-libros.jpg" alt="Foto 1">
+                </div>
+
+                <div class="slide">
+                  <img src="/static/crud-notas-con-login 2.jpg" alt="Foto 2">
+                </div>
+
+                <div class="slide">
+                  <img src="/static/crud-notas-con-login.jpg" alt="Foto 3">
+                </div>
+
+                <div class="slide">
+                  <img src="/static/miFoto.jpg" alt="Foto 4">
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="carrousel-btns">
+              <button href="#" class="prev">
+                <i class="fas fa-angle-left"></i>
+              </button>
+              <button href="#" class="next">
+                <i class="fas fa-angle-right"></i>
+              </button>
+            </div>
+
+
+
+
 
             <div class="portafolio-info">
               <h3>CRUD de Libros</h3>
@@ -328,6 +370,7 @@
 
 
 
+
     <section id="contacto" data-scroll-spy>
 
       <h3>Este es el contacto</h3>
@@ -361,7 +404,8 @@
     <h3>Este es el footer</h3>
   </footer>
 
-  <script src="js/index.js" type="module"></script>
+  <!-- Cada vez que se suba a github, cambiar el 1.0.0 por el n° sig -->
+  <script src="js/index.js?1.0.0" type="module"></script>
 </body>
 
 </html>
