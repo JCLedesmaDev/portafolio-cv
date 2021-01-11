@@ -81,9 +81,9 @@ main .portafolio .modal{
   justify-content: center;
   align-items: center;
  
-  // opacity: 0;
-  // pointer-events: none;
-  // transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0);
   transition: all 1s ease-in-out;
 
   .modal-content{
@@ -92,8 +92,25 @@ main .portafolio .modal{
 
     .modal-cerrar{
       position: absolute;
-      top: -1.5rem;
+      top: -1.75rem;
       right: 0rem;
+
+      i{
+        height: 1.5rem;
+        width: 1.5rem;
+        background-color: $color-principal;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 1.5rem;
+        color: $color-blanco;
+      }
     }
   }
+
+  &[id|="trabajo"]:target{ /*De esta manera, cuando le hagamos click a un target/elemento que dentro de sus atributos tenga un id con la palabra "trabajo, se va a abrir automaticamente el modal*/
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+  }
+
 }
