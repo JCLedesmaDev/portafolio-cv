@@ -63,7 +63,7 @@ main .portafolio .contenedor{
   }
 }
 
-// Modal del portafolio:
+// Efectos e inclusion del modal del portafolio:
 
 main .portafolio .modal{
   position: fixed;
@@ -75,6 +75,7 @@ main .portafolio .modal{
 
   width: 100%;
   height: 100vh;
+  padding: 0 1rem;
   background: $color-negro-opacidad;
 
   display: flex;
@@ -86,26 +87,6 @@ main .portafolio .modal{
   transform: scale(0);
   transition: all 1s ease-in-out;
 
-  .modal-content{
-    position: relative;
-    width: 90%;
-
-    .modal-cerrar{
-      position: absolute;
-      top: -1.75rem;
-      right: 0rem;
-
-      i{
-        height: 1.5rem;
-        width: 1.5rem;
-        background-color: $color-principal;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 1.5rem;
-        color: $color-blanco;
-      }
-    }
-  }
 
   &[id|="trabajo"]:target{ /*De esta manera, cuando le hagamos click a un target/elemento que dentro de sus atributos tenga un id con la palabra "trabajo, se va a abrir automaticamente el modal*/
     opacity: 1;
@@ -113,4 +94,61 @@ main .portafolio .modal{
     transform: scale(1);
   }
 
+}
+
+// Estilo del modal 
+main .modal .modal-content{
+  position: relative;
+  background-color: $color-blanco;
+  padding: 1rem 0;
+  margin-bottom: 3rem;
+
+  .modal-cerrar{
+    position: absolute;
+    top: .25rem;
+    right: .25rem;
+
+    i{
+      height: 1.5rem;
+      width: 1.5rem;
+      background-color: $color-principal;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 1.5rem;
+      color: $color-blanco;
+    }
+  }
+
+  .portafolio-modal{
+    padding: 1rem;
+    max-width: 400px;
+    height: 75vh;
+
+    display: flex;
+    flex-direction: column;
+    
+    img{
+      width: 100%;
+      height: 21rem;
+      object-fit: cover;
+    }
+
+    .portafolio-info h3{
+      border-bottom: 3px solid $color-principal;
+      margin: 1rem 0;
+      padding-bottom: .5rem;
+      text-align: center;
+      color: $color-texto;
+    }
+
+    .portafolio-info .portafolio-details{
+      display: grid;
+      grid-template-columns: 40% 60%;
+      grid-auto-rows: 1.5rem;
+
+      b{
+        color: $color-principal;
+      }
+    }
+  }
 }
