@@ -307,6 +307,7 @@ header nav .contenedor .menu.is-active {
   justify-content: center;
   align-items: center;
   background: linear-gradient(to top, #ff6a0074, rgba(29, 241, 171, 0.455), rgba(42, 162, 214, 0.638));
+  background: -webkit-linear-gradient(to top, #ff6a0074, rgba(29, 241, 171, 0.455), rgba(42, 162, 214, 0.638));
   text-align: center;
   margin-top: -4rem;
 }
@@ -471,7 +472,7 @@ main .portafolio .modal {
   z-index: 1000;
   width: 100%;
   height: 100vh;
-  padding: 0 1rem;
+  padding: 1rem;
   background: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
@@ -479,7 +480,7 @@ main .portafolio .modal {
   opacity: 0;
   pointer-events: none;
   transform: scale(0);
-  transition: all 1s ease-in-out;
+  transition: opacity 1s ease-in-out, pointer-events 1s ease-in-out, transform 1s ease-in-out;
 }
 main .portafolio .modal[id|=trabajo]:target {
   /*De esta manera, cuando le hagamos click a un target/elemento que dentro de sus atributos tenga un id con la palabra "trabajo, se va a abrir automaticamente el modal*/
@@ -490,9 +491,6 @@ main .portafolio .modal[id|=trabajo]:target {
 
 main .modal .modal-content {
   position: relative;
-  background-color: #fff;
-  padding: 1rem 0;
-  margin-bottom: 3rem;
 }
 main .modal .modal-content .modal-cerrar {
   position: absolute;
@@ -509,9 +507,12 @@ main .modal .modal-content .modal-cerrar i {
   color: #fff;
 }
 main .modal .modal-content .portafolio-modal {
-  padding: 1rem;
+  width: 100%;
   max-width: 400px;
-  height: 75vh;
+  height: 85vh;
+  padding: 2rem 1rem 0.5rem 1rem;
+  margin-bottom: 3rem;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
 }
