@@ -38,22 +38,20 @@ export function sliderCarrusel(prevBtn, nextBtn, slides, slidesImgNumber){
 
       console.log("BOTON ATRAS")
 
-      if (imageIndex > 0 && imageIndex < $slidesImagesNumber.length) {
+      if (imageIndex > 0 && imageIndex <= $slidesImagesNumber.length) {
         imageIndex--;
         translateX += 25; 
         $slides.style.transform = `translateX(${translateX}%)`;
-
+        
       }
       
-
       if (imageIndex <= 0) {
-        imageIndex++;
-        translateX -= 25;
-        $slides.style.transform = `translateX(-${translateX}%)`;
-      }
 
-      console.log(imageIndex)
-      console.log(translateX)
+        translateX = -75;
+        imageIndex = 4;
+
+        $slides.style.transform = `translateX(${translateX}%)`;
+      }
 
     }
 
