@@ -150,6 +150,11 @@ p {
     text-align: right;
   }
 }
+.box-shadow {
+  /* Clase generica para darle sombreado elementos */
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+
 .section-title {
   border-top: 3px solid #dc143c;
   border-bottom: 3px solid #dc143c;
@@ -168,11 +173,6 @@ p {
 
 .bg-gray-light {
   background-color: var(--gray-light-color);
-}
-
-.box-shadow-1 {
-  /* Clase generica para darle sombreado elementos */
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
 }
 
 header nav {
@@ -635,6 +635,50 @@ main .modal .modal-content .portafolio-modal .portafolio-info .portafolio-detail
   }
   main .portafolio .contenedor .section-title {
     grid-column: span 3;
+  }
+}
+main .contacto .contenedor .contact-cards {
+  margin: 0 1rem;
+}
+main .contacto .contenedor .contact-cards .contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  margin: 1rem auto;
+}
+main .contacto .contenedor .contact-cards .contact-card i {
+  font-size: 2rem;
+  color: #dc143c;
+  margin-top: 0.5rem;
+  margin-bottom: -0.5rem;
+}
+main .contacto .contenedor .contact-cards .contact-card small {
+  margin-top: -1rem;
+}
+main .contacto .contenedor .contact-cards .contact-card .redes-sociales a {
+  padding: 0 0.75rem;
+}
+main .contacto .contenedor .contact-cards .contact-card .redes-sociales a i {
+  font-size: 1.75rem;
+  color: #14172d;
+}
+
+/* Media queries para tablet */
+@media screen and (min-width: 768px) {
+  main .contacto .contenedor .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: space-around;
+  }
+}
+/* Media queries para escritorio */
+@media screen and (min-width: 1024px) {
+  main .contacto .contenedor .contact-cards {
+    grid-template-columns: repeat(4, 24%);
+    justify-content: space-between;
   }
 }
 

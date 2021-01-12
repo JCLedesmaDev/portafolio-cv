@@ -1,0 +1,59 @@
+
+// TARJETAS DE CONTACTOS
+
+main .contacto .contenedor .contact-cards {
+  margin: 0 1rem;
+
+  .contact-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    height: 8rem;
+    margin: 1rem auto;
+
+    i{
+      font-size: 2rem;
+      color: $color-principal;
+      margin-top: .5rem;
+      margin-bottom: -.5rem;
+    }
+
+    small{
+      margin-top: -1rem;
+    }
+
+    .redes-sociales a{
+      padding: 0 0.75rem;
+
+      i{
+        font-size: 1.75rem;
+        color: $color-secundario;
+      }
+    }
+  }
+}
+
+/* Media queries para tablet */
+@media screen and (min-width:768px){
+
+  main .contacto .contenedor .contact-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: space-around;
+  }
+}
+
+/* Media queries para escritorio */
+@media screen and (min-width: 1024px){
+
+  main .contacto .contenedor .contact-cards{
+    grid-template-columns: repeat(4, 24%);
+    justify-content: space-between;
+  }
+}
+
+
+//FORMULARIO DE EMAIL
