@@ -1,42 +1,61 @@
-export function sliderCarrusel(){
+export function sliderCarrusel(prevBtn, nextBtn, slides, slidesImgNumber){
 
-  const $nextBtn = document.querySelector(".carrousel-btns .next")
-  const $prevBtn = document.querySelector(".carrousel-btns .prev")
-  const $slides = document.querySelector(".slides")
+  // const $btnSlides = document.querySelectorAll(".carrousel-btns");
 
-  let i = 0;
+  const $slides = document.querySelector(slides);
+  const $slidesImagesNumber = document.querySelectorAll(slidesImgNumber);
 
-  document.addEventListener("click", e=>{
-
-    if (e.target === $nextBtn) {
+  let imageIndex = 0;
+  let translateX = 0;
 
 
-      // $slides.scrollLeft += $slides.offsetWidth;
+  document.addEventListener("click", e =>{
     
-      $slides.style.transform = "translateX(25%)"
+    if (e.target.matches(nextBtn) || e.target.matches(`${nextBtn} *`)) {
 
-      i--;
-      
-      if (i < 0) {
-        i = $slides.length - 1;
+      console.log("BOTON ADELANTE")
+
+      if (imageIndex !== $slidesImagesNumber.length) {
+        imageIndex++;
+        translateX -= 25;
+        $slides.style.transform = `translateX(${translateX}%)`;
       }
-      
-      // $slides[i].classList.add("active");
+
+      if(imageIndex === $slidesImagesNumber.length){
+        
+        $slides.style.transform = `translateX(0%)`;        
+        imageIndex = 0;
+        translateX = 0;
+      }
+
+      console.log(imageIndex)
+      console.log(translateX)
+
     }
 
-    // if (e.target === $prevBtn) {
 
-    //   e.preventDefault();
-    
-    //   $slides[i].classList.remove("active");
-    //   i++;
+    if (e.target.matches(prevBtn) || e.target.matches(`${prevBtn} *`)) {
+
+      console.log("BOTON ATRAS")
+
+      if (imageIndex > 0 && imageIndex < $slidesImagesNumber.length) {
+        imageIndex--;
+        translateX += 25; 
+        $slides.style.transform = `translateX(${translateX}%)`;
+
+      }
       
-    //   if (i >= $slides.length) {
-    //     i = 0;
-    //   }
-      
-    //   $slides[i].classList.add("active");
-    // }
+
+      if (imageIndex <= 0) {
+        imageIndex++;
+        translateX -= 25;
+        $slides.style.transform = `translateX(-${translateX}%)`;
+      }
+
+      console.log(imageIndex)
+      console.log(translateX)
+
+    }
 
   })
 }

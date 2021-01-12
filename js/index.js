@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () =>{
   menu_Header_Responsive(".menu-btn", ".menu", ".menu a", "section")
   menu_Scroll_Spy();
   menu_desplegable();
-  sliderCarrusel()
+
+  sliderCarrusel(".carrousel-btns #prev", ".carrousel-btns #next", ".slides", ".slides img")
 })
 
 window.addEventListener("scroll", ()=>{
