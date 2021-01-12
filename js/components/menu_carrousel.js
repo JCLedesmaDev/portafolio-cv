@@ -11,9 +11,8 @@ export function sliderCarrusel(prevBtn, nextBtn, slides, slidesImgNumber){
 
   document.addEventListener("click", e =>{
     
+    // Boton Siguiente:
     if (e.target.matches(nextBtn) || e.target.matches(`${nextBtn} *`)) {
-
-      console.log("BOTON ADELANTE")
 
       if (imageIndex !== $slidesImagesNumber.length) {
         imageIndex++;
@@ -22,38 +21,26 @@ export function sliderCarrusel(prevBtn, nextBtn, slides, slidesImgNumber){
       }
 
       if(imageIndex === $slidesImagesNumber.length){
-        
         $slides.style.transform = `translateX(0%)`;        
         imageIndex = 0;
         translateX = 0;
       }
-
-      console.log(imageIndex)
-      console.log(translateX)
-
     }
 
-
+    // Boton Anterior:
     if (e.target.matches(prevBtn) || e.target.matches(`${prevBtn} *`)) {
-
-      console.log("BOTON ATRAS")
 
       if (imageIndex > 0 && imageIndex <= $slidesImagesNumber.length) {
         imageIndex--;
         translateX += 25; 
         $slides.style.transform = `translateX(${translateX}%)`;
-        
       }
       
       if (imageIndex <= 0) {
-
         translateX = -75;
         imageIndex = 4;
-
         $slides.style.transform = `translateX(${translateX}%)`;
       }
-
     }
-
   })
 }
