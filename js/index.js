@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", () =>{
   menu_Scroll_Spy();
   menu_desplegable();
 
-  sliderCarrusel(".carrousel-btns #prev", ".carrousel-btns #next", ".slides", ".slides img")
+  sliderCarrusel("#carrousel-1");
+  sliderCarrusel("#carrousel-2");
+
 })
 
 window.addEventListener("scroll", ()=>{

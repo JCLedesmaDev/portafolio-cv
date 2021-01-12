@@ -1,18 +1,17 @@
-export function sliderCarrusel(prevBtn, nextBtn, slides, slidesImgNumber){
+export function sliderCarrusel(idCarrousel){
 
-  // const $btnSlides = document.querySelectorAll(".carrousel-btns");
-
-  const $slides = document.querySelector(slides);
-  const $slidesImagesNumber = document.querySelectorAll(slidesImgNumber);
+  const $prevBtn = document.querySelector(`${idCarrousel} .carrousel-btns #prev`);
+  const $nextBtn = document.querySelector(`${idCarrousel} .carrousel-btns #next`);
+  const $slides = document.querySelector(`${idCarrousel} .slides`);
+  const $slidesImagesNumber = document.querySelectorAll(`${idCarrousel} .slides img`);
 
   let imageIndex = 0;
   let translateX = 0;
 
-
   document.addEventListener("click", e =>{
     
     // Boton Siguiente:
-    if (e.target.matches(nextBtn) || e.target.matches(`${nextBtn} *`)) {
+    if (e.target === $nextBtn || e.target === `${$nextBtn} *`) {
 
       if (imageIndex !== $slidesImagesNumber.length) {
         imageIndex++;
@@ -28,7 +27,7 @@ export function sliderCarrusel(prevBtn, nextBtn, slides, slidesImgNumber){
     }
 
     // Boton Anterior:
-    if (e.target.matches(prevBtn) || e.target.matches(`${prevBtn} *`)) {
+    if (e.target === $prevBtn || e.target === `${$prevBtn} *`) {
 
       if (imageIndex > 0 && imageIndex <= $slidesImagesNumber.length) {
         imageIndex--;
