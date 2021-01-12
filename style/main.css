@@ -520,6 +520,7 @@ main .modal .modal-content .portafolio-modal .carrousel {
   max-width: 400px;
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 main .modal .modal-content .portafolio-modal .carrousel .slides {
   /* Por cada carrusel que tengas, le debes agregar un 100% al width. COmo tenemos 4 slides, ponemos 400%*/
@@ -535,16 +536,16 @@ main .modal .modal-content .portafolio-modal .carrousel .slides img {
   object-fit: cover;
   vertical-align: top;
 }
-main .modal .modal-content .portafolio-modal .carrousel-btns {
+main .modal .modal-content .portafolio-modal .carrousel .carrousel-btns {
   position: absolute;
-  top: 7.75rem;
+  top: 5.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  padding: 0 0.25rem;
+  width: 100%;
+  padding: 0 0.5rem;
 }
-main .modal .modal-content .portafolio-modal .carrousel-btns button {
+main .modal .modal-content .portafolio-modal .carrousel .carrousel-btns button {
   font-size: 1.25rem;
   border: 1px solid #14172d;
   border-radius: 0.25rem;

@@ -135,6 +135,8 @@ main .modal .modal-content{
       width: 100%;
       overflow: hidden;
 
+      position: relative;
+
       .slides{
 
         /* Por cada carrusel que tengas, le debes agregar un 100% al width. COmo tenemos 4 slides, ponemos 400%*/
@@ -153,31 +155,33 @@ main .modal .modal-content{
         }
 
       }
-    }
 
-    .carrousel-btns{
-      position: absolute;
-      top: 7.75rem;
+      .carrousel-btns{
+        position: absolute;
+        top: 5.5rem;
 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 90%;
-      padding: 0 .25rem;
-      
-      button{
-        font-size: 1.25rem;
-        border: 1px solid $color-secundario;
-        border-radius: .25rem;
-        padding: 0 .25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 .5rem;
         
-        outline: none;
-        background-color: transparent;
-        color: $color-principal;
-        font-size: 1.25rem;
-        cursor: pointer;
+        button{
+          font-size: 1.25rem;
+          border: 1px solid $color-secundario;
+          border-radius: .25rem;
+          padding: 0 .25rem;
+          
+          outline: none;
+          background-color: transparent;
+          color: $color-principal;
+          font-size: 1.25rem;
+          cursor: pointer;
+        }
       }
     }
+
+
 
 
 
