@@ -393,6 +393,7 @@ main .about .titulo::before {
   display: flex;
   justify-content: space-between;
   font-size: 1.15rem;
+  text-align: start;
 }
 
 progress {
