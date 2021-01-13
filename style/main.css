@@ -647,7 +647,11 @@ main .contacto .contenedor .contact-cards .contact-card {
   align-items: center;
   width: 100%;
   height: 8rem;
-  margin: 1rem auto;
+  margin: 1.5rem auto;
+  transition: transform 0.5s ease-in-out;
+}
+main .contacto .contenedor .contact-cards .contact-card:hover {
+  transform: scale(1.1);
 }
 main .contacto .contenedor .contact-cards .contact-card i {
   font-size: 2rem;
@@ -703,14 +707,17 @@ main .contacto .contenedor .contact-cards .contact-card .redes-sociales a:hover 
 @media screen and (min-width: 768px) {
   main .contacto .contenedor .contact-cards {
     display: grid;
-    grid-template-columns: repeat(2, 48%);
+    grid-template-columns: repeat(2, 46%);
     justify-content: space-around;
+  }
+  main .contacto .contenedor .contact-cards .contact-card {
+    margin-bottom: 0;
   }
 }
 /* Media queries para escritorio */
 @media screen and (min-width: 1024px) {
   main .contacto .contenedor .contact-cards {
-    grid-template-columns: repeat(4, 24%);
+    grid-template-columns: repeat(4, 23%);
     justify-content: space-between;
   }
 }
