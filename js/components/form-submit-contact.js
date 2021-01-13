@@ -1,6 +1,6 @@
 export function submitForm() {
   
-    const $form = d.querySelector(".contacto-form"),
+  const $form = d.querySelector(".contacto-form"),
    $loader = d.querySelector(".contacto-form-loader"),
    $response = d.querySelector(".contacto-form-response");
 
@@ -8,7 +8,7 @@ export function submitForm() {
   $form.addEventListener("submit", e =>{
 
     e.preventDefault()
-    
+
 
     // Faltan validaciones del formulario
     
@@ -44,7 +44,5 @@ export function submitForm() {
       })
 
   })
-
-
 
 }

@@ -658,14 +658,47 @@ main .contacto .contenedor .contact-cards .contact-card i {
 main .contacto .contenedor .contact-cards .contact-card small {
   margin-top: -1rem;
 }
+main .contacto .contenedor .contact-cards .contact-card .redes-sociales {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 main .contacto .contenedor .contact-cards .contact-card .redes-sociales a {
-  padding: 0 0.75rem;
+  margin: 0 0.75rem;
 }
 main .contacto .contenedor .contact-cards .contact-card .redes-sociales a i {
+  font-size: 1.5rem;
+  margin: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  text-align: center;
+  line-height: 1.75rem;
+  border-radius: 6.25rem;
+  color: #fff;
+}
+main .contacto .contenedor .contact-cards .contact-card .redes-sociales a i.fa-instagram {
+  background: #c13584;
+}
+main .contacto .contenedor .contact-cards .contact-card .redes-sociales a i.fa-linkedin-in {
+  font-size: 1.25rem;
+  background: #0084B1;
+}
+main .contacto .contenedor .contact-cards .contact-card .redes-sociales a i.fa-github {
+  color: #000;
   font-size: 1.75rem;
-  color: #14172d;
+}
+main .contacto .contenedor .contact-cards .contact-card .redes-sociales a:hover i {
+  animation: icono 0.5s ease;
 }
 
+@keyframes icono {
+  from {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  to {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
 /* Media queries para tablet */
 @media screen and (min-width: 768px) {
   main .contacto .contenedor .contact-cards {

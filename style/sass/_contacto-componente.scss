@@ -24,16 +24,57 @@ main .contacto .contenedor .contact-cards {
       margin-top: -1rem;
     }
 
-    .redes-sociales a{
-      padding: 0 0.75rem;
+    .redes-sociales{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
 
-      i{
-        font-size: 1.75rem;
-        color: $color-secundario;
+      a{
+        margin: 0 .75rem;
+
+        i{
+          font-size: 1.5rem;
+          margin: 0;
+          width: 1.75rem;
+          height: 1.75rem;
+          text-align: center;
+          line-height: 1.75rem;
+          border-radius: 6.25rem;
+          color: $color-blanco;
+
+          &.fa-instagram{
+            background: #c13584;
+          }
+
+          &.fa-linkedin-in{
+            font-size: 1.25rem;
+            background: #0084B1;
+          }
+
+          &.fa-github{
+            color: #000;
+            font-size: 1.75rem;
+          }
+        }
+
+        &:hover i {
+          animation: icono 0.5s ease;
+        }
       }
     }
   }
 }
+
+@keyframes icono {
+  from {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  to {
+    // Le espeficiamos a que rote a sea en el eje Y X o Z
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
 
 /* Media queries para tablet */
 @media screen and (min-width:768px){

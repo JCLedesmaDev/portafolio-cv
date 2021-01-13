@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () =>{
   sliderCarrusel("#carrousel-1");
   sliderCarrusel("#carrousel-2");
 
-  submitForm()
+  submitForm();
 })
 
 window.addEventListener("scroll", ()=>{
