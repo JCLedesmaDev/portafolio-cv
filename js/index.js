@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
   sliderCarrusel("#carrousel-1");
   sliderCarrusel("#carrousel-2");
+  sliderCarrusel("#carrousel-3");
 
   submitForm();
 })
