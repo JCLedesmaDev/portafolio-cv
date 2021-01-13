@@ -707,7 +707,7 @@ main .contacto .contenedor .contact-cards .contact-card .redes-sociales a:hover 
 @media screen and (min-width: 768px) {
   main .contacto .contenedor .contact-cards {
     display: grid;
-    grid-template-columns: repeat(2, 46%);
+    grid-template-columns: repeat(2, 47%);
     justify-content: space-around;
   }
   main .contacto .contenedor .contact-cards .contact-card {
@@ -719,6 +719,9 @@ main .contacto .contenedor .contact-cards .contact-card .redes-sociales a:hover 
   main .contacto .contenedor .contact-cards {
     grid-template-columns: repeat(4, 23%);
     justify-content: space-between;
+  }
+  main .contacto .contenedor .contact-cards .contact-card:hover {
+    transform: scale(1.1);
   }
 }
 main .contacto .contenedor .contacto-form {

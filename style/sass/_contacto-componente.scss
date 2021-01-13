@@ -14,7 +14,6 @@ main .contacto .contenedor .contact-cards {
     margin: 1.5rem auto;
 
     transition: transform .5s ease-in-out;
-
     &:hover{
       transform: scale(1.05);
     }
@@ -88,10 +87,10 @@ main .contacto .contenedor .contact-cards {
 
   main .contacto .contenedor .contact-cards{
     display: grid;
-    grid-template-columns: repeat(2, 46%); //48
+    grid-template-columns: repeat(2, 47%);
     justify-content: space-around;
 
-    .contact-card{ //no taba
+    .contact-card{
       margin-bottom: 0;
     }
   }
@@ -100,8 +99,12 @@ main .contacto .contenedor .contact-cards {
 @media screen and (min-width: 1024px){
 
   main .contacto .contenedor .contact-cards{
-    grid-template-columns: repeat(4, 23%); //24
+    grid-template-columns: repeat(4, 23%);
     justify-content: space-between;
+  
+    .contact-card:hover{
+      transform: scale(1.1);
+    }
   }
 }
 
