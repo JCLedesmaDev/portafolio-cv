@@ -651,7 +651,7 @@ main .contacto .contenedor .contact-cards .contact-card {
   transition: transform 0.5s ease-in-out;
 }
 main .contacto .contenedor .contact-cards .contact-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 main .contacto .contenedor .contact-cards .contact-card i {
   font-size: 2rem;

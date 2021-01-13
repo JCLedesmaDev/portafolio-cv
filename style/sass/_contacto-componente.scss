@@ -14,9 +14,11 @@ main .contacto .contenedor .contact-cards {
     margin: 1.5rem auto;
 
     transition: transform .5s ease-in-out;
+
     &:hover{
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
+
 
     i{
       font-size: 2rem;
