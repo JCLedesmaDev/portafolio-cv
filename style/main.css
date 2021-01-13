@@ -276,9 +276,6 @@ header nav .contenedor .menu.is-active {
     padding: 0.5rem;
     color: #fff;
   }
-  header nav .contenedor .menu a:last-child {
-    padding-right: 0;
-  }
   header nav.navModelo2 {
     background-color: #14172d;
     height: 4.6rem;
