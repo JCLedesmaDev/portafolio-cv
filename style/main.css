@@ -463,7 +463,7 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
   transform: translateX(0%);
 }
 
-main .portafolio .modal {
+.modal {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -482,22 +482,22 @@ main .portafolio .modal {
   transform: scale(0);
   transition: opacity 1s ease-in-out, pointer-events 1s ease-in-out, transform 1s ease-in-out;
 }
-main .portafolio .modal[id|=trabajo]:target {
+.modal[id|=trabajo]:target {
   /*De esta manera, cuando le hagamos click a un target/elemento que dentro de sus atributos tenga un id con la palabra "trabajo, se va a abrir automaticamente el modal*/
   opacity: 1;
   pointer-events: auto;
   transform: scale(1);
 }
 
-main .modal .modal-content {
+.modal .modal-content {
   position: relative;
 }
-main .modal .modal-content .modal-cerrar {
+.modal .modal-content .modal-cerrar {
   position: absolute;
   top: 0.25rem;
   right: 0.25rem;
 }
-main .modal .modal-content .modal-cerrar i {
+.modal .modal-content .modal-cerrar i {
   height: 1.5rem;
   width: 1.5rem;
   background-color: #dc143c;
@@ -506,7 +506,7 @@ main .modal .modal-content .modal-cerrar i {
   line-height: 1.5rem;
   color: #fff;
 }
-main .modal .modal-content .portafolio-modal {
+.modal .modal-content .portafolio-modal {
   width: 100%;
   max-width: 400px;
   height: 85vh;
@@ -516,14 +516,14 @@ main .modal .modal-content .portafolio-modal {
   display: flex;
   flex-direction: column;
 }
-main .modal .modal-content .portafolio-modal .carrousel {
+.modal .modal-content .portafolio-modal .carrousel {
   max-width: 400px;
   width: 100%;
   height: 100%;
   overflow: hidden;
   position: relative;
 }
-main .modal .modal-content .portafolio-modal .carrousel .slides {
+.modal .modal-content .portafolio-modal .carrousel .slides {
   /* Por cada carrusel que tengas, le debes agregar un 100% al width. COmo tenemos 4 slides, ponemos 400%*/
   display: flex;
   width: 400%;
@@ -531,13 +531,13 @@ main .modal .modal-content .portafolio-modal .carrousel .slides {
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
 }
-main .modal .modal-content .portafolio-modal .carrousel .slides img {
+.modal .modal-content .portafolio-modal .carrousel .slides img {
   width: 25%;
   height: 100%;
   object-fit: cover;
   vertical-align: top;
 }
-main .modal .modal-content .portafolio-modal .carrousel .carrousel-btns {
+.modal .modal-content .portafolio-modal .carrousel .carrousel-btns {
   position: absolute;
   top: 0;
   width: 100%;
@@ -547,7 +547,7 @@ main .modal .modal-content .portafolio-modal .carrousel .carrousel-btns {
   justify-content: space-between;
   align-items: center;
 }
-main .modal .modal-content .portafolio-modal .carrousel .carrousel-btns button {
+.modal .modal-content .portafolio-modal .carrousel .carrousel-btns button {
   font-size: 1.25rem;
   border: 1px solid #14172d;
   border-radius: 0.25rem;
@@ -558,19 +558,19 @@ main .modal .modal-content .portafolio-modal .carrousel .carrousel-btns button {
   font-size: 1.25rem;
   cursor: pointer;
 }
-main .modal .modal-content .portafolio-modal .portafolio-info h3 {
+.modal .modal-content .portafolio-modal .portafolio-info h3 {
   border-bottom: 3px solid #dc143c;
   margin: 1rem 0;
   padding-bottom: 0.5rem;
   text-align: center;
   color: #222;
 }
-main .modal .modal-content .portafolio-modal .portafolio-info .portafolio-details {
+.modal .modal-content .portafolio-modal .portafolio-info .portafolio-details {
   display: grid;
   grid-template-columns: 40% 60%;
   grid-auto-rows: 1.5rem;
 }
-main .modal .modal-content .portafolio-modal .portafolio-info .portafolio-details b {
+.modal .modal-content .portafolio-modal .portafolio-info .portafolio-details b {
   color: #dc143c;
 }
 
@@ -601,7 +601,7 @@ main .modal .modal-content .portafolio-modal .portafolio-info .portafolio-detail
     grid-column: span 2;
   }
 
-  main .modal .modal-content .portafolio-modal {
+  .modal .modal-content .portafolio-modal {
     width: 100%;
     max-width: 800px;
     height: 400px;
@@ -609,19 +609,19 @@ main .modal .modal-content .portafolio-modal .portafolio-info .portafolio-detail
     display: flex;
     flex-direction: row;
   }
-  main .modal .modal-content .portafolio-modal img {
+  .modal .modal-content .portafolio-modal img {
     width: 50%;
     height: 100%;
   }
-  main .modal .modal-content .portafolio-modal .portafolio-info {
+  .modal .modal-content .portafolio-modal .portafolio-info {
     margin: 1rem;
     align-self: center;
   }
-  main .modal .modal-content .portafolio-modal .portafolio-info h3 {
+  .modal .modal-content .portafolio-modal .portafolio-info h3 {
     margin: 0;
   }
 
-  main .modal .modal-content .portafolio-modal .carrousel .slides {
+  .modal .modal-content .portafolio-modal .carrousel .slides {
     height: 100%;
   }
 }
@@ -679,6 +679,99 @@ main .contacto .contenedor .contact-cards .contact-card .redes-sociales a i {
   main .contacto .contenedor .contact-cards {
     grid-template-columns: repeat(4, 24%);
     justify-content: space-between;
+  }
+}
+main .contacto .contenedor .contacto-form {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 800px;
+}
+main .contacto .contenedor .contacto-form > * {
+  margin: 0.75rem auto;
+  padding: 0.5rem;
+  width: 100%;
+  resize: none;
+  outline: none;
+}
+main .contacto .contenedor .contacto-form *::placeholder {
+  color: #14172d;
+}
+main .contacto .contenedor .contacto-form input[required] {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.85rem;
+  border: none;
+  border-bottom: 2px solid rgba(220, 20, 60, 0.75);
+  padding-left: 0;
+}
+main .contacto .contenedor .contacto-form textarea {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.85rem;
+  border: thin solid rgba(220, 20, 60, 0.75);
+}
+main .contacto .contenedor .contacto-form input[type=submit] {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-top: 0;
+  border: 1px solid rgba(220, 20, 60, 0.75);
+  transition: opacity 0.5s ease-out;
+}
+main .contacto .contenedor .contacto-form input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 1024px) {
+  main .contacto .contenedor .contacto-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+  main .contacto .contenedor .contacto-form textarea {
+    font-size: 1rem;
+    grid-column: span 2;
+  }
+  main .contacto .contenedor .contacto-form .contacto-form-loader {
+    grid-column: span 2;
+  }
+  main .contacto .contenedor .contacto-form input {
+    font-size: 1rem;
+  }
+  main .contacto .contenedor .contacto-form input[type=submit] {
+    margin-left: 0;
+    grid-column: span 2;
+    width: 50%;
+    margin: auto;
+  }
+}
+.modal#gracias:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content .contacto-form-response {
+  padding: 1rem;
+  width: 400px;
+  text-align: center;
+  background-color: #fff;
+  margin: auto;
+}
+.modal-content .contacto-form-response i {
+  color: #dc143c;
+  margin-top: 2rem;
+  font-size: 4rem;
+}
+
+footer {
+  background-color: #501464;
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem;
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    margin-bottom: 0;
   }
 }
 

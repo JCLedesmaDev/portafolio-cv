@@ -16,7 +16,7 @@
 
   <!-- Hoja CSS -->
   <!-- Cada vez que se suba a github, cambiar el 1.0.0 por el n° sig -->
-  <link rel="stylesheet" href="style/main.css?1.0.6">
+  <link rel="stylesheet" href="style/main.css?1.1.0">
 
 </head>
 
@@ -371,6 +371,7 @@
 
         <h2 class="section-title">¿Interesado?</h2>
 
+        <!-- SOCIALES -->
         <article class="contact-cards contenedor">
 
           <!-- UBICACION -->
@@ -426,7 +427,41 @@
 
         </article>
 
-        <form class="contacto-form"></form>
+        <!-- FORMULARIO -->
+        <form class="contacto-form">
+
+          <input type="text" name="name" placeholder="Ingrese su nombre."
+            title="Solo se acepta letras y espacios en blanco." pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+
+          <input type="email" name="email" placeholder="Ingrese su correo electronico." title="Email incorrecto"
+            pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+
+          <textarea name="comentario" cols="50" rows="10" placeholder="Dejeme su consulta aqui."></textarea>
+
+          <div class="contacto-form-loader text-center none">
+            <img src="static/Spin-1s-200px.svg" alt="Enviando...">
+          </div>
+
+          <input type="submit" class="btn text-lg-center" value="Enviar mensaje">
+
+        </form>
+
+        <!-- MODAL DEL FORMULARIO -->
+        <article id="gracias" class="modal">
+
+          <div class="modal-content">
+
+            <article class="contacto-form-response">
+
+              <h3>¡Muchas gracias por su consulta!</h3>
+
+              <i class="far fa-smile-wink"></i>
+
+            </article>
+
+          </div>
+
+        </article>
 
       </div>
 
@@ -437,11 +472,11 @@
 
 
   <footer>
-    <h3>Este es el footer</h3>
+    <small>Sitio diseño por <a href="#" target="_blank" rel="noopener">@JuancitoLedesma</a></small>
   </footer>
 
   <!-- Cada vez que se suba a github, cambiar el 1.0.0 por el n° sig -->
-  <script src="js/index.js?1.0.6" type="module"></script>
+  <script src="js/index.js?1.1.0" type="module"></script>
 </body>
 
 </html>

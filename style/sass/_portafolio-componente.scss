@@ -64,8 +64,7 @@ main .portafolio .contenedor{
 }
 
 // Efectos e inclusion del modal del portafolio:
-
-main .portafolio .modal{
+.modal{
   position: fixed;
   top: 0;
   bottom: 0;
@@ -98,7 +97,7 @@ main .portafolio .modal{
 
 // Estilo del modal 
 
-main .modal .modal-content{
+.modal .modal-content{
   position: relative;
 
   .modal-cerrar{
@@ -250,7 +249,7 @@ main .modal .modal-content{
   }
 
   //Estilo del modal
-  main .modal .modal-content .portafolio-modal{
+  .modal .modal-content .portafolio-modal{
     width: 100%;
     max-width: 800px;
     height: 400px;
@@ -275,7 +274,7 @@ main .modal .modal-content{
   }
 
   //Estilo del carrousel
-  main .modal .modal-content .portafolio-modal .carrousel{
+  .modal .modal-content .portafolio-modal .carrousel{
 
     .slides{
       height: 100%;

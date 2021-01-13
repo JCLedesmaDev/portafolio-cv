@@ -1,0 +1,14 @@
+footer{
+  background-color: $color-footer;
+  color: $color-blanco;
+  text-align: center;
+  padding: .75rem;
+  margin-bottom: $header-nav-height;
+}
+
+@media screen and (min-width: 1024px){
+
+  footer{
+    margin-bottom: 0;
+  }
+}
