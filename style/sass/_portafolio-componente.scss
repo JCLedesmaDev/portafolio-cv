@@ -151,7 +151,7 @@ main .portafolio .contenedor{
         transform: translateX(0);
         transition: transform .5s ease-in-out;
 
-        // animation: carousel-slide 12s ease-in-out 3s 3;
+        //Animacion llamada en JS utilizando la animacion existente mas abajo
     
         img{
           /* Por cada foto (igual que arriba), lo debes dividir al 100%, es decir como tenemos 5 fotos en el slide, ponemos 20%*/
@@ -160,7 +160,6 @@ main .portafolio .contenedor{
           object-fit: contain; //fil
           object-position: center;
         }
-
       }
 
       .carrousel-btns{
@@ -235,9 +234,6 @@ main .portafolio .contenedor{
 }
 
 
-
-
-
 @keyframes carousel-slide{
 
   /* Comparte el mismo porcentaje que el comentario de abajo de DIVISION*/
@@ -245,19 +241,39 @@ main .portafolio .contenedor{
     transform: translateX(0%);
   }
   
-  25%{
-    transform: translateX(-25%);
+  13%{
+    transform: translateX(-20%);
   }
   
-  50%{
-    transform: translateX(-50%);
+  26%{
+    transform: translateX(-40%);
 
   }
   
-  75%{
-    transform: translateX(-75%);
+  39%{
+    transform: translateX(-60%);
   }
 
+  52%{
+    transform: translateX(-80%);
+  }
+
+  65%{
+    transform: translateX(-60%);
+  }
+  
+  78%{
+    transform: translateX(-40%);
+  }
+  
+  88%{
+    transform: translateX(-20%);
+
+  }
+  
+  100%{
+    transform: translateX(0%);
+  }
 }
 
 

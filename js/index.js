@@ -4,7 +4,7 @@ import { menu_desplegable } from "./components/menu/menu_desplegable.js";
 import { sliderCarrusel } from "./components/carrousel/slide-carrousel.js";
 import { submitForm } from "./components/formSubmit/form-submit-contact.js";
 
-import { modalScroll } from "./components/carrousel/modalScroll.js";
+import { modal } from "./components/carrousel/modal.js";
 
 
 document.addEventListener("DOMContentLoaded", () =>{
@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () =>{
   sliderCarrusel("#carrousel-1");
   sliderCarrusel("#carrousel-2");
   sliderCarrusel("#carrousel-3");
+  modal();
 
   submitForm();
 })
@@ -24,5 +25,5 @@ window.addEventListener("scroll", ()=>{
 })
 
 window.addEventListener("hashchange", e=>{
-  modalScroll()
+  modal()
 })
