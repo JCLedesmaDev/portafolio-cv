@@ -13,9 +13,12 @@ export function modal() {
       // Para que cuando ingresemos al modal, comience la animacion
       slide.style.animation = "carousel-slide 25s ease-in-out 3s 1";
       
-    }else{
-      $body.style.overflow = "scroll";
-      slide.style.animation = none;
     }
+    
+    if (location.hash.includes("#close")) {
+      $body.style.overflow = "scroll";
+      slide.style.animation = "none";
+    }
+   
   })
 }
