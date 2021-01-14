@@ -141,7 +141,7 @@ main .portafolio .contenedor{
 
         /* Por cada carrusel que tengas, le debes agregar un 100% al width. COmo tenemos 4 slides, ponemos 400%*/
         display: flex;
-        width: 400%;
+        width: 500%; //400
         height: 30vh;
       
         transform: translateX(0);
@@ -150,10 +150,10 @@ main .portafolio .contenedor{
         // animation: carousel-slide 12s ease-in-out 3s 3;
     
         img{
-          width: 25%;
-          height: 100%;
-          object-fit:contain ;
-          vertical-align: top;
+          width: 20%; //25
+          height: inherit;
+          object-fit:contain;
+          object-position: center;
         }
 
       }

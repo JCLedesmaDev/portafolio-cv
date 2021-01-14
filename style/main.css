@@ -526,16 +526,16 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
 .modal .modal-content .portafolio-modal .carrousel .slides {
   /* Por cada carrusel que tengas, le debes agregar un 100% al width. COmo tenemos 4 slides, ponemos 400%*/
   display: flex;
-  width: 400%;
+  width: 500%;
   height: 30vh;
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
 }
 .modal .modal-content .portafolio-modal .carrousel .slides img {
-  width: 25%;
-  height: 100%;
+  width: 20%;
+  height: inherit;
   object-fit: contain;
-  vertical-align: top;
+  object-position: center;
 }
 .modal .modal-content .portafolio-modal .carrousel .carrousel-btns {
   position: absolute;

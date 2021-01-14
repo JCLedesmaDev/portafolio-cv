@@ -15,7 +15,7 @@ export function sliderCarrusel(idCarrousel){
 
       if (imageIndex !== $slidesImagesNumber.length) {
         imageIndex++;
-        translateX -= 25;
+        translateX -= 20; //25
         $slides.style.transform = `translateX(${translateX}%)`;
       }
 
@@ -31,13 +31,13 @@ export function sliderCarrusel(idCarrousel){
 
       if (imageIndex > 0 && imageIndex <= $slidesImagesNumber.length) {
         imageIndex--;
-        translateX += 25; 
+        translateX += 20; //25
         $slides.style.transform = `translateX(${translateX}%)`;
       }
       
       if (imageIndex <= 0) {
-        translateX = -75;
-        imageIndex = 4;
+        translateX = -80; //-75
+        imageIndex = 5; //4
         $slides.style.transform = `translateX(${translateX}%)`;
       }
     }
