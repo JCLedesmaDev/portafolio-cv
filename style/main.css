@@ -488,6 +488,9 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
   pointer-events: auto;
   transform: scale(1);
 }
+.modal[id|=trabajo]:target:has(body) {
+  overflow-y: hidden;
+}
 
 .modal .modal-content {
   position: relative;
@@ -578,6 +581,9 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
   text-align: center;
   color: #222;
 }
+.modal .modal-content .portafolio-modal .portafolio-info p {
+  margin-top: 0;
+}
 .modal .modal-content .portafolio-modal .portafolio-info .portafolio-details {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -635,6 +641,9 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
   }
   .modal .modal-content .portafolio-modal .portafolio-info h3 {
     margin: 0;
+  }
+  .modal .modal-content .portafolio-modal .portafolio-info p {
+    margin: 1rem 0;
   }
 
   .modal .modal-content .portafolio-modal .carrousel {

@@ -92,8 +92,11 @@ main .portafolio .contenedor{
     opacity: 1;
     pointer-events: auto;
     transform: scale(1);
-  }
 
+    &:has(body){
+      overflow-y: hidden;
+    }
+  }
 }
 
 // Estilo del modal 
@@ -210,6 +213,10 @@ main .portafolio .contenedor{
         color: $color-texto;
       }
 
+      p{
+        margin-top: 0;
+      }
+
       .portafolio-details{
         display: grid;
         grid-template-columns: 40% 60%;
@@ -289,6 +296,9 @@ main .portafolio .contenedor{
 
       h3{
         margin: 0;
+      }
+      p{
+        margin: 1rem 0;
       }
     }
   }

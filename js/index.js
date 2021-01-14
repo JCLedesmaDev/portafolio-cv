@@ -4,6 +4,9 @@ import { menu_desplegable } from "./components/menu/menu_desplegable.js";
 import { sliderCarrusel } from "./components/carrousel/slide-carrousel.js";
 import { submitForm } from "./components/formSubmit/form-submit-contact.js";
 
+import { modalScroll } from "./components/carrousel/modalScroll.js";
+
+
 document.addEventListener("DOMContentLoaded", () =>{
   menu_Header_Responsive(".menu-btn", ".menu", ".menu a", "section")
   menu_Scroll_Spy();
@@ -20,3 +23,6 @@ window.addEventListener("scroll", ()=>{
   menu_desplegable();
 })
 
+window.addEventListener("hashchange", e=>{
+  modalScroll()
+})
