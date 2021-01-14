@@ -524,7 +524,7 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
   position: relative;
 }
 .modal .modal-content .portafolio-modal .carrousel .slides {
-  /* Por cada carrusel que tengas, le debes agregar un 100% al width. COmo tenemos 4 slides, ponemos 400%*/
+  /* Por cada foto que tengas, le debes agregar un 100% al width. COmo tenemos 5 fotos en el slide, ponemos 500%*/
   display: flex;
   width: 500%;
   height: 30vh;
@@ -532,6 +532,7 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
   transition: transform 0.5s ease-in-out;
 }
 .modal .modal-content .portafolio-modal .carrousel .slides img {
+  /* Por cada foto (igual que arriba), lo debes dividir al 100%, es decir como tenemos 5 fotos en el slide, ponemos 20%*/
   width: 20%;
   height: inherit;
   object-fit: contain;

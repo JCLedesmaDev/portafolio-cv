@@ -139,7 +139,7 @@ main .portafolio .contenedor{
 
       .slides{
 
-        /* Por cada carrusel que tengas, le debes agregar un 100% al width. COmo tenemos 4 slides, ponemos 400%*/
+        /* Por cada foto que tengas, le debes agregar un 100% al width. COmo tenemos 5 fotos en el slide, ponemos 500%*/
         display: flex;
         width: 500%; //400
         height: 30vh;
@@ -150,6 +150,7 @@ main .portafolio .contenedor{
         // animation: carousel-slide 12s ease-in-out 3s 3;
     
         img{
+          /* Por cada foto (igual que arriba), lo debes dividir al 100%, es decir como tenemos 5 fotos en el slide, ponemos 20%*/
           width: 20%; //25
           height: inherit;
           object-fit:contain;
