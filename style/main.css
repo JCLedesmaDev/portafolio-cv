@@ -520,6 +520,7 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
   max-width: 400px;
   width: 100%;
   height: 100%;
+  max-height: 11.5rem;
   overflow: hidden;
   position: relative;
 }
@@ -554,10 +555,21 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
   border-radius: 0.25rem;
   padding: 0 0.25rem;
   outline: none;
-  background-color: transparent;
-  color: #dc143c;
+  background-color: #14172d;
+  color: #fff;
   font-size: 1.25rem;
   cursor: pointer;
+}
+.modal .modal-content .portafolio-modal .carrousel .carrousel-btns button:hover {
+  background-color: transparent;
+  color: #14172d;
+}
+.modal .modal-content .portafolio-modal .portafolio-info {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .modal .modal-content .portafolio-modal .portafolio-info h3 {
   border-bottom: 3px solid #dc143c;
@@ -570,6 +582,9 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
   display: grid;
   grid-template-columns: 40% 60%;
   grid-auto-rows: 1.5rem;
+  align-content: end;
+  width: 100%;
+  height: 100%;
 }
 .modal .modal-content .portafolio-modal .portafolio-info .portafolio-details b {
   color: #dc143c;
@@ -622,6 +637,9 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
     margin: 0;
   }
 
+  .modal .modal-content .portafolio-modal .carrousel {
+    max-height: none;
+  }
   .modal .modal-content .portafolio-modal .carrousel .slides {
     height: 100%;
   }
