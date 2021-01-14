@@ -45,7 +45,7 @@ export function sliderCarrusel(idCarrousel){
         translateX = -80;
 
         //Indicamos la cantidad de fotos
-        imageIndex = 5;
+        imageIndex = 5; 
         $slides.style.transform = `translateX(${translateX}%)`;
       }
     }
