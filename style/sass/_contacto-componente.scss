@@ -80,7 +80,6 @@ main .contacto .contenedor .contact-cards {
   }
 }
 
-
 /* Media queries para tablet */
 @media screen and (min-width:768px){
 
@@ -108,56 +107,138 @@ main .contacto .contenedor .contact-cards {
 }
 
 
+
 //FORMULARIO DE EMAIL
 main .contacto .contenedor .contacto-form{
   margin: 2rem auto;
   padding: 1rem;
   max-width: 800px;
 
-  & > *{
-    margin: .75rem auto;
-    padding: .5rem;
+  .contenedor-form{
+
+    .form-inputs{
+      position: relative;
+      
+      input[required]{
+        width: 100%;
+        padding: .5rem 0;
+        padding-right: 1.5rem;
+        margin: .75rem auto;
     
-    width: 100%;
-    resize: none;
-    outline: none;
-    
-  }
+        font-family: $font;
+        font-size: .85rem;
 
-  *::placeholder{
-    color: $color-secundario;
-  }
+        outline: none;
+        border: none;
+        border-bottom: 2px solid $color-principal-opacidad;
 
-  input[required]{
-    font-family: $font;
-    font-size: .85rem;
+        &::placeholder{
+          color: $color-secundario;
+        }
+      }
 
-    border: none;
-    border-bottom: 2px solid $color-principal-opacidad;
-    padding-left: 0;
-  }
+      .form__validacion-estado{
+        position: absolute;
+        right: .4rem;
+        bottom: 1rem;
+        z-index: 100;
+        font-size: 16px;
+        padding: .5rem 0;
+        opacity: 0; 
+        color: none;
 
-  textarea{
-    font-family: $font;
-    font-size: .85rem;
-    border: thin solid $color-principal-opacidad;
-  }
+        //Estilo de los iconos para las validaciones. (En JS, le agregaremos a la etiqueta "form__validacion-estado", las clases ".form-correcto" o "form-incorrecto" para que cambie respectivamente de color
+        &.form-correcto{
+          color: #1ed12d;
+          opacity: 1; 
+        }
 
-  input[type="submit"]{
-    font-family: $font;
-    font-size: .85rem;  
-
-    cursor: pointer;
-    margin-top: 0;
-    border: 1px solid $color-principal-opacidad;
-    transition: opacity .5s ease-out;
-
-    &:hover{
-      opacity: .8;
+        &.form-incorrecto{
+        	color: #bb2929;
+  	      opacity: 1;
+        }
+      }
     }
-  }
+
+    .form-textarea{
+      position: relative;
+
+      textarea{
+        width: 100%;
+        margin: .75rem auto;
+        padding: .5rem;
+        padding-right: 1.5rem;
+        
+        font-family: $font;
+        font-size: .85rem;
+        border: thin solid $color-principal-opacidad;
+
+        resize: none;
+        outline: none;
+
+        &::placeholder{
+          color: $color-secundario;
+        }
+      }
+
+      .form__validacion-estado{
+        position: absolute;
+        right: .4rem;
+        top: 1rem;
+        z-index: 100;
+        font-size: 16px;
+        padding: .5rem 0;
+        opacity: 0; 
+        color: none;
+
+        //Estilo de los iconos para las validaciones. (En JS, le agregaremos a la etiqueta "form__validacion-estado", las clases ".form-correcto" o "form-incorrecto" para que cambie respectivamente de color
+        &.form-correcto{
+          color: #1ed12d;
+          opacity: 1; 
+        }
+
+        &.form-incorrecto{
+        	color: #bb2929;
+  	      opacity: 1;
+        }
+      }
+    }
+
+    .form-error{
+      font-size: 12px;
+      margin-top: 0;
+      background-color: rgba(255, 0, 0, 0.102);
+      display: none; //cambiar a block con JS cuando haya error
+
+      &.form-error-activo{
+        display: block;
+      }
+    }
+
+    input[type="submit"]{
+
+      width: 100%;
+      margin: .75rem auto;
+      padding: .5rem;
+      margin-top: 0;
+
+      font-family: $font;
+      font-size: .85rem;  
+
+      cursor: pointer;
+      border: 1px solid $color-principal-opacidad;
+      transition: opacity .5s ease-out;
+
+      &:hover{
+        opacity: .8;
+      }
+    }
+  } 
 }
 
+
+
+//HACER DE NUEVO
 @media screen and (min-width: 1024px){
   main .contacto .contenedor .contacto-form{
     display: grid;
@@ -188,10 +269,13 @@ main .contacto .contenedor .contacto-form{
 }
 
 
-// MODAL DEL FORUMARIO (Re utilizamos el css creado anteriormente con la clase ".modal" en el archivo "portafolio-contenedor", es por eso q no especificamos mucho aqui
-.modal#gracias:target{   
+
+
+// MODAL DEL FORUMARIO (Re utilizamos el css creado anteriormente con la clase ".modal" en el archivo "portafolio-componente", es por eso q no especificamos mucho aqui
+.modal[id|="gracias"]:target{   
   opacity: 1;   
-  pointer-events: auto; 
+  pointer-events: auto;
+  transform: scale(1);
 } 
 .modal-content .contacto-form-response{
   padding: 1rem;

@@ -2,9 +2,8 @@ import { menu_Header_Responsive } from "./components/menu/menu-responsive.js";
 import { menu_Scroll_Spy } from "./components/menu/menu-scrollSpy.js";
 import { menu_desplegable } from "./components/menu/menu_desplegable.js";
 import { sliderCarrusel } from "./components/carrousel/slide-carrousel.js";
-import { submitForm } from "./components/formSubmit/form-submit-contact.js";
-
 import { modal } from "./components/carrousel/modal.js";
+import { formContact } from "./components/formularioContacto/form-submit-contact.js";
 
 
 document.addEventListener("DOMContentLoaded", () =>{
@@ -17,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () =>{
   sliderCarrusel("#carrousel-3");
   modal();
 
-  submitForm();
+  formContact()
 })
 
 window.addEventListener("scroll", ()=>{

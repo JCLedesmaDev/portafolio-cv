@@ -88,15 +88,11 @@ main .portafolio .contenedor{
   transition: opacity 1s ease-in-out, pointer-events 1s ease-in-out, transform 1s ease-in-out;
 
 
-  &[id|="trabajo"]:target{ /*De esta manera, cuando le hagamos click a un target/elemento que dentro de sus atributos tenga un id con la palabra "trabajo, se va a abrir automaticamente el modal*/
-    opacity: 1;
-    pointer-events: auto;
-    transform: scale(1);
-
-    &:has(body){
-      overflow-y: hidden;
-    }
-  }
+}
+.modal[id|="trabajo"]:target{ /*De esta manera, cuando le hagamos click a un target/elemento que dentro de sus atributos tenga un id con la palabra "trabajo, se va a abrir automaticamente el modal*/
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
 }
 
 // Estilo del modal 
