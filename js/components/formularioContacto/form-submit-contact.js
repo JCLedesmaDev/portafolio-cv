@@ -95,7 +95,7 @@ export function formContact(){
       //Caso de haber un error, forzamos ir al "catch", caso contrario, ejecutamos el codigo correspondiente
       .then(res => res.ok ? res.json() : Promise.reject(res))
       .then(json =>{
-        console.log(json)
+        // console.log(json)
 
         //Activamos la ventana "modal" = "Muchas gracias por su consulta"
         location.hash = "#gracias";

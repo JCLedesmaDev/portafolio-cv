@@ -147,7 +147,7 @@ main .portafolio .contenedor{
         transform: translateX(0);
         transition: transform .5s ease-in-out;
 
-        //Animacion llamada en JS utilizando la animacion existente mas abajo
+        //Animacion llamada en JS (modal.js) utilizando la animacion existente mas abajo
     
         img{
           /* Por cada foto (igual que arriba), lo debes dividir al 100%, es decir como tenemos 5 fotos en el slide, ponemos 20%*/
@@ -237,36 +237,23 @@ main .portafolio .contenedor{
     transform: translateX(0%);
   }
   
-  13%{
+  20%{
     transform: translateX(-20%);
   }
   
-  26%{
+  40%{
     transform: translateX(-40%);
 
   }
   
-  39%{
+  60%{
     transform: translateX(-60%);
   }
 
-  52%{
+  80%{
     transform: translateX(-80%);
   }
 
-  65%{
-    transform: translateX(-60%);
-  }
-  
-  78%{
-    transform: translateX(-40%);
-  }
-  
-  88%{
-    transform: translateX(-20%);
-
-  }
-  
   100%{
     transform: translateX(0%);
   }

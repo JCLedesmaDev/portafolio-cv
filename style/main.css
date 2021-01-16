@@ -599,26 +599,17 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
   0% {
     transform: translateX(0%);
   }
-  13% {
+  20% {
     transform: translateX(-20%);
   }
-  26% {
+  40% {
     transform: translateX(-40%);
   }
-  39% {
+  60% {
     transform: translateX(-60%);
   }
-  52% {
+  80% {
     transform: translateX(-80%);
-  }
-  65% {
-    transform: translateX(-60%);
-  }
-  78% {
-    transform: translateX(-40%);
-  }
-  88% {
-    transform: translateX(-20%);
   }
   100% {
     transform: translateX(0%);

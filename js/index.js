@@ -6,7 +6,7 @@ import { modal } from "./components/carrousel/modal.js";
 import { formContact } from "./components/formularioContacto/form-submit-contact.js";
 
 
-document.addEventListener("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded", (e) =>{
   menu_Header_Responsive(".menu-btn", ".menu", ".menu a", "section")
   menu_Scroll_Spy();
   menu_desplegable();
@@ -17,6 +17,10 @@ document.addEventListener("DOMContentLoaded", () =>{
   modal();
 
   formContact()
+})
+
+document.addEventListener("keydown", (e) =>{
+  modal(e.key);
 })
 
 window.addEventListener("scroll", ()=>{
