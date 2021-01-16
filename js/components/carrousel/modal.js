@@ -9,7 +9,7 @@ export function modal(key) {
     if (location.hash.includes("#trabajo-")) {
 
       // Para que no funcione el scroll del body
-      $body.style.overflow = "hidden";
+      $body.style.overflowY = "hidden";
 
       // Para que cuando ingresemos al modal, comience la animacion
       slide.style.animation = "carousel-slide 15s ease-in-out 3s";
@@ -24,7 +24,7 @@ export function modal(key) {
 
     
     if (location.hash.includes("#close")) {
-      $body.style.overflow = "scroll";
+      $body.style.overflowY = "scroll";
       slide.style.animation = "none";
     }
    

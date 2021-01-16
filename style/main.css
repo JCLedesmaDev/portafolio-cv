@@ -861,21 +861,22 @@ main .contacto .contenedor .contacto-form .contenedor-form input[type=submit]:ho
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1rem;
   }
-  main .contacto .contenedor .contacto-form textarea {
-    font-size: 1rem;
-    grid-column: span 2;
-  }
-  main .contacto .contenedor .contacto-form .contacto-form-loader {
-    grid-column: span 2;
-  }
-  main .contacto .contenedor .contacto-form input {
+  main .contacto .contenedor .contacto-form .contenedor-form .form-inputs input {
     font-size: 1rem;
   }
-  main .contacto .contenedor .contacto-form input[type=submit] {
-    margin-left: 0;
+  main .contacto .contenedor .contacto-form .contenedor-form[id=form__comentario] {
+    grid-column: span 2;
+  }
+  main .contacto .contenedor .contacto-form .contenedor-form[id=form__comentario] .form-textarea textarea {
+    font-size: 1rem;
+  }
+  main .contacto .contenedor .contacto-form .contenedor-form[id=form__boton] {
     grid-column: span 2;
     width: 50%;
     margin: auto;
+  }
+  main .contacto .contenedor .contacto-form .contacto-form-loader {
+    grid-column: span 2;
   }
 }
 .modal[id|=gracias]:target {

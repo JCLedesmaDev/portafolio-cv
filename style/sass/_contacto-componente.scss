@@ -115,7 +115,7 @@ main .contacto .contenedor .contacto-form{
   max-width: 800px;
 
   .contenedor-form{
-
+    
     .form-inputs{
       position: relative;
       
@@ -209,7 +209,7 @@ main .contacto .contenedor .contacto-form{
       margin-top: 0;
       background-color: rgba(255, 0, 0, 0.102);
       display: none; //cambiar a block con JS cuando haya error
-
+      
       &.form-error-activo{
         display: block;
       }
@@ -236,39 +236,36 @@ main .contacto .contenedor .contacto-form{
   } 
 }
 
-
-
-//HACER DE NUEVO
 @media screen and (min-width: 1024px){
+
   main .contacto .contenedor .contacto-form{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     column-gap: 1rem;
 
-    textarea{
+    .contenedor-form .form-inputs input{
       font-size: 1rem;
+    }
+
+    .contenedor-form[id="form__comentario"]{
       grid-column: span 2;
+
+      .form-textarea textarea{
+        font-size: 1rem;
+      }
+    }
+
+    .contenedor-form[id="form__boton"]{
+      grid-column: span 2;
+      width: 50%;
+      margin: auto;
     }
 
     .contacto-form-loader{
       grid-column: span 2;
     }
-
-    input{
-      font-size: 1rem;
-
-      &[type="submit"]{
-        margin-left: 0;
-        grid-column: span 2;
-        width: 50%;
-        margin: auto;
-      }
-    }
   }
-
 }
-
-
 
 
 // MODAL DEL FORUMARIO (Re utilizamos el css creado anteriormente con la clase ".modal" en el archivo "portafolio-componente", es por eso q no especificamos mucho aqui
