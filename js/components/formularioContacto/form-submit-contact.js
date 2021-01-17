@@ -70,6 +70,38 @@ export function formContact(){
         //Quitamos la clase para que no aparezca el mensaje de error
         $formError.classList.remove("form-error-activo")
       }
+
+      //5) Si nuestro elemento no posee ningun patron
+      if (!patternInput) {
+        
+        //Si esta vacio, pues que muestre el mensaje de error, caso contrario, muestra el que esta todo correcto
+        if ($inputForm.value === "") {  
+
+          //Cambiamos el color del icono a incorrecto(rojo)
+          $formValidate.classList.add("form-incorrecto");
+          $formValidate.classList.remove("form-correcto");
+
+          //Cambiamos el icono de valido a la X
+          $formValidate.classList.remove('fa-check-circle');
+          $formValidate.classList.add('fa-times-circle');
+
+          //Agregamos la clase para que aparezca el mensaje de error
+          $formError.classList.add("form-error-activo")
+
+        }else{
+
+          //Cambiamos el color del icono a correcto(verder)
+          $formValidate.classList.remove("form-incorrecto");
+          $formValidate.classList.add("form-correcto");
+
+          //Cambiamos el icono de la X al icono valido
+          $formValidate.classList.add('fa-check-circle');
+          $formValidate.classList.remove('fa-times-circle');
+
+          //Quitamos la clase para que no aparezca el mensaje de error
+          $formError.classList.remove("form-error-activo")
+        }
+      }
     }
   })
 
