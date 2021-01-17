@@ -5,7 +5,7 @@ main .about .titulo{
   font-size: 1.75rem;
   font-weight: 600;
   color: $color-titulo;
-  margin-top: 3rem;
+  margin-top: 1rem; //Cambiar en media query
   margin-bottom: 2.5rem;
   padding-left: .35rem;
   padding-bottom: 1rem;
@@ -48,8 +48,14 @@ main .about .titulo{
 
     h2.titulo{
       grid-column: span 3;
+      margin-top: $header-nav-height; 
+    }
+
+    .article-space{
+      margin-bottom: 0;
     }
   }
+
 }
 
 

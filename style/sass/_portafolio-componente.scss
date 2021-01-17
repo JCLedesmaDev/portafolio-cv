@@ -1,6 +1,9 @@
 // Portafolio en si:
-
 main .portafolio .contenedor{
+
+  h2{
+    margin-top: $header-nav-height;
+  }
 
   .portafolio-card{
     position: relative;
@@ -63,6 +66,76 @@ main .portafolio .contenedor{
     }
   }
 }
+
+/* Media queries para tablet */
+@media screen and (min-width:768px){
+
+  // Portafolio en si:
+  main .portafolio .contenedor{
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-around;
+    align-items: center;
+
+    .section-title{
+      grid-column: span 2;
+    }
+  }
+
+  //Estilo del modal
+  .modal .modal-content .portafolio-modal{
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    padding: 1rem 1rem;
+
+    display: flex;
+    flex-direction: row;
+
+    img{
+      width: 50%;
+      height: 100%;
+    }
+
+    .portafolio-info{
+      margin: 1rem;
+      align-self: center;
+
+      h3{
+        margin: 0;
+      }
+      p{
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  //Estilo del carrousel
+  .modal .modal-content .portafolio-modal .carrousel{
+    max-height: none;
+
+    .slides{
+      height: 100%;
+    }
+  }
+}
+/* Media queries para escritorio */
+@media screen and (min-width: 1024px){
+
+  // Portafolio en si:
+  main .portafolio .contenedor{
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    justify-content: space-around;
+    align-items: center;
+
+    .section-title{
+      grid-column: span 3;
+    }
+
+  }
+}
+
 
 // Efectos e inclusion del modal del portafolio:
 .modal{
@@ -230,7 +303,6 @@ main .portafolio .contenedor{
   }
 }
 
-
 @keyframes carousel-slide{
 
   /* Comparte el mismo porcentaje que el comentario de abajo de DIVISION*/
@@ -257,80 +329,5 @@ main .portafolio .contenedor{
 
   100%{
     transform: translateX(0%);
-  }
-}
-
-
-
-
-
-/* Media queries para tablet */
-@media screen and (min-width:768px){
-
-  // Portafolio en si:
-  main .portafolio .contenedor{
-    display: grid;
-    grid-template-columns: repeat(2, 45%);
-    justify-content: space-around;
-    align-items: center;
-
-    .section-title{
-      grid-column: span 2;
-    }
-  }
-
-  //Estilo del modal
-  .modal .modal-content .portafolio-modal{
-    width: 100%;
-    max-width: 800px;
-    height: 400px;
-    padding: 1rem 1rem;
-
-    display: flex;
-    flex-direction: row;
-
-    img{
-      width: 50%;
-      height: 100%;
-    }
-
-    .portafolio-info{
-      margin: 1rem;
-      align-self: center;
-
-      h3{
-        margin: 0;
-      }
-      p{
-        margin: 1rem 0;
-      }
-    }
-  }
-
-  //Estilo del carrousel
-  .modal .modal-content .portafolio-modal .carrousel{
-    max-height: none;
-
-    .slides{
-      height: 100%;
-    }
-  }
-}
-
-
-/* Media queries para escritorio */
-@media screen and (min-width: 1024px){
-
-  // Portafolio en si:
-  main .portafolio .contenedor{
-    display: grid;
-    grid-template-columns: repeat(3, 32%);
-    justify-content: space-around;
-    align-items: center;
-
-    .section-title{
-      grid-column: span 3;
-    }
-
   }
 }

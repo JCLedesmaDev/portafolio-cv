@@ -1,7 +1,6 @@
 
 // TARJETAS DE CONTACTOS
 main .contacto .contenedor .contact-cards {
-  margin: 0 1rem;
 
   .contact-card{
     display: flex;
@@ -110,7 +109,7 @@ main .contacto .contenedor .contact-cards {
 
 //FORMULARIO DE EMAIL
 main .contacto .contenedor .contacto-form{
-  margin: 2rem 1rem;
+  margin: 2rem 0;
   padding: 1rem;
   max-width: 800px;
   transition: transform .5s ease-in-out;
@@ -256,7 +255,7 @@ main .contacto .contenedor .contacto-form{
 
 @media screen and (min-width: 768px){
   main .contacto .contenedor .contacto-form{
-    margin: 2rem 1.75rem;
+    margin: 2rem .75rem;
 
     &:hover{
       transform: scale(1.03);
@@ -265,6 +264,10 @@ main .contacto .contenedor .contacto-form{
 }
 
 @media screen and (min-width: 1024px){
+
+  main .contacto .contenedor h2{
+    margin-top: $header-nav-height;
+  }
 
   main .contacto .contenedor .contacto-form{
     display: grid;

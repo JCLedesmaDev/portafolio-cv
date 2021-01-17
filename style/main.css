@@ -99,7 +99,8 @@ p {
 }
 
 .section-space {
-  padding: 2rem 1rem;
+  padding: 1rem;
+  padding-top: 1.5rem;
 }
 
 .article-space {
@@ -161,6 +162,7 @@ p {
   width: 15rem;
   text-align: center;
   margin: 2rem auto;
+  margin-top: 1rem;
   padding: 0.5rem 1rem;
   color: #333;
 }
@@ -343,7 +345,7 @@ main .about .titulo {
   font-size: 1.75rem;
   font-weight: 600;
   color: #333;
-  margin-top: 3rem;
+  margin-top: 1rem;
   margin-bottom: 2.5rem;
   padding-left: 0.35rem;
   padding-bottom: 1rem;
@@ -381,6 +383,10 @@ main .about .titulo::before {
   }
   main .about h2.titulo {
     grid-column: span 3;
+    margin-top: 4rem;
+  }
+  main .about .article-space {
+    margin-bottom: 0;
   }
 }
 /* Componente barra de progreso */
@@ -412,6 +418,9 @@ progress::-webkit-progress-value {
   background-color: #dc143c;
 }
 
+main .portafolio .contenedor h2 {
+  margin-top: 4rem;
+}
 main .portafolio .contenedor .portafolio-card {
   position: relative;
   width: 100%;
@@ -463,6 +472,60 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
   transform: translateX(0%);
 }
 
+/* Media queries para tablet */
+@media screen and (min-width: 768px) {
+  main .portafolio .contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-around;
+    align-items: center;
+  }
+  main .portafolio .contenedor .section-title {
+    grid-column: span 2;
+  }
+
+  .modal .modal-content .portafolio-modal {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+  }
+  .modal .modal-content .portafolio-modal img {
+    width: 50%;
+    height: 100%;
+  }
+  .modal .modal-content .portafolio-modal .portafolio-info {
+    margin: 1rem;
+    align-self: center;
+  }
+  .modal .modal-content .portafolio-modal .portafolio-info h3 {
+    margin: 0;
+  }
+  .modal .modal-content .portafolio-modal .portafolio-info p {
+    margin: 1rem 0;
+  }
+
+  .modal .modal-content .portafolio-modal .carrousel {
+    max-height: none;
+  }
+  .modal .modal-content .portafolio-modal .carrousel .slides {
+    height: 100%;
+  }
+}
+/* Media queries para escritorio */
+@media screen and (min-width: 1024px) {
+  main .portafolio .contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    justify-content: space-around;
+    align-items: center;
+  }
+  main .portafolio .contenedor .section-title {
+    grid-column: span 3;
+  }
+}
 .modal {
   position: fixed;
   top: 0;
@@ -616,63 +679,6 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
     transform: translateX(0%);
   }
 }
-/* Media queries para tablet */
-@media screen and (min-width: 768px) {
-  main .portafolio .contenedor {
-    display: grid;
-    grid-template-columns: repeat(2, 45%);
-    justify-content: space-around;
-    align-items: center;
-  }
-  main .portafolio .contenedor .section-title {
-    grid-column: span 2;
-  }
-
-  .modal .modal-content .portafolio-modal {
-    width: 100%;
-    max-width: 800px;
-    height: 400px;
-    padding: 1rem 1rem;
-    display: flex;
-    flex-direction: row;
-  }
-  .modal .modal-content .portafolio-modal img {
-    width: 50%;
-    height: 100%;
-  }
-  .modal .modal-content .portafolio-modal .portafolio-info {
-    margin: 1rem;
-    align-self: center;
-  }
-  .modal .modal-content .portafolio-modal .portafolio-info h3 {
-    margin: 0;
-  }
-  .modal .modal-content .portafolio-modal .portafolio-info p {
-    margin: 1rem 0;
-  }
-
-  .modal .modal-content .portafolio-modal .carrousel {
-    max-height: none;
-  }
-  .modal .modal-content .portafolio-modal .carrousel .slides {
-    height: 100%;
-  }
-}
-/* Media queries para escritorio */
-@media screen and (min-width: 1024px) {
-  main .portafolio .contenedor {
-    display: grid;
-    grid-template-columns: repeat(3, 32%);
-    justify-content: space-around;
-    align-items: center;
-  }
-  main .portafolio .contenedor .section-title {
-    grid-column: span 3;
-  }
-}
-main .contacto .contenedor .contact-cards {
-  margin: 0 1rem;
-}
 main .contacto .contenedor .contact-cards .contact-card {
   display: flex;
   flex-direction: column;
@@ -758,7 +764,7 @@ main .contacto .contenedor .contact-cards .contact-card .redes-sociales a:hover 
   }
 }
 main .contacto .contenedor .contacto-form {
-  margin: 2rem 1rem;
+  margin: 2rem 0;
   padding: 1rem;
   max-width: 800px;
   transition: transform 0.5s ease-in-out;
@@ -874,13 +880,17 @@ main .contacto .contenedor .contacto-form .contenedor-form input[type=submit]:ho
 
 @media screen and (min-width: 768px) {
   main .contacto .contenedor .contacto-form {
-    margin: 2rem 1.75rem;
+    margin: 2rem 0.75rem;
   }
   main .contacto .contenedor .contacto-form:hover {
     transform: scale(1.03);
   }
 }
 @media screen and (min-width: 1024px) {
+  main .contacto .contenedor h2 {
+    margin-top: 4rem;
+  }
+
   main .contacto .contenedor .contacto-form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
