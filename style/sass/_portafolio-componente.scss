@@ -159,9 +159,7 @@ main .portafolio .contenedor{
   opacity: 0;
   pointer-events: none;
   transform: scale(0);
-  transition: opacity .5s ease-in-out, pointer-events .5s ease-in-out, transform .5s ease-in-out;
-
-
+  transition: opacity .7s ease-in-out, pointer-events .7s ease-in-out, transform .7s ease-in-out;
 }
 .modal[id|="trabajo"]:target{ /*De esta manera, cuando le hagamos click a un target/elemento que dentro de sus atributos tenga un id con la palabra "trabajo, se va a abrir automaticamente el modal*/
   opacity: 1;

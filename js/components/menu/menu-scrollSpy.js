@@ -3,6 +3,8 @@ export function menu_Scroll_Spy() {
   //Almacenamos en una const, todos los elementos de tipo "section" que tienen el data-attribute "data-scroll-spy"
   const $sections = document.querySelectorAll("main section[data-scroll-spy]")
 
+  console.log($sections)
+
   const cb = (entries)=>{
 
     entries.forEach(entry =>{
