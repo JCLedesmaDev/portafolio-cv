@@ -2,7 +2,7 @@
 main .portafolio .contenedor{
 
   h2{
-    margin-top: $header-nav-height;
+    margin-top: 2rem;
   }
 
   .portafolio-card{
@@ -131,8 +131,8 @@ main .portafolio .contenedor{
 
     .section-title{
       grid-column: span 3;
+      margin-top: $header-nav-height;
     }
-
   }
 }
 
@@ -170,7 +170,6 @@ main .portafolio .contenedor{
 }
 
 // Estilo del modal 
-
 .modal .modal-content{
   position: relative;
 

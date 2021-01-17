@@ -419,7 +419,7 @@ progress::-webkit-progress-value {
 }
 
 main .portafolio .contenedor h2 {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 main .portafolio .contenedor .portafolio-card {
   position: relative;
@@ -524,6 +524,7 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
   }
   main .portafolio .contenedor .section-title {
     grid-column: span 3;
+    margin-top: 4rem;
   }
 }
 .modal {

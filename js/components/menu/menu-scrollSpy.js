@@ -26,9 +26,11 @@ export function menu_Scroll_Spy() {
 
   const observer = new IntersectionObserver(cb, {
 
-    //threshold: [.8, 0.95]
-    threshold: [.6, 1]
-    
+    //Limites => Va de 0 a 1 (en porcentajes 1 = 100%). El 0 significa que en cuanto apenas se vea un 0% del contenido de la siguiente seccion, se va a marcar
+    threshold: 0.40,
+
+    //Se va a activar cuando tenga entre del 40% al 45% de visibilidad
+    // threshold: [.4, .6]
   })
   
   $sections.forEach(el => observer.observe(el))
