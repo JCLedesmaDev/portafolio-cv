@@ -474,6 +474,7 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
   height: 100vh;
   padding: 1rem;
   background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(0.75rem);
   display: flex;
   justify-content: center;
   align-items: center;
