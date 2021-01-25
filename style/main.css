@@ -111,9 +111,8 @@ p {
   color: #dc143c;
 }
 
-.gray-scale-img {
+.scale-img {
   width: 90%;
-  filter: grayscale(1);
 }
 
 .padding-top {
