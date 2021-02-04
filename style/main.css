@@ -471,61 +471,6 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
   transform: translateX(0%);
 }
 
-/* Media queries para tablet */
-@media screen and (min-width: 768px) {
-  main .portafolio .contenedor {
-    display: grid;
-    grid-template-columns: repeat(2, 45%);
-    justify-content: space-around;
-    align-items: center;
-  }
-  main .portafolio .contenedor .section-title {
-    grid-column: span 2;
-  }
-
-  .modal .modal-content .portafolio-modal {
-    width: 100%;
-    max-width: 800px;
-    height: 400px;
-    padding: 1rem 1rem;
-    display: flex;
-    flex-direction: row;
-  }
-  .modal .modal-content .portafolio-modal img {
-    width: 50%;
-    height: 100%;
-  }
-  .modal .modal-content .portafolio-modal .portafolio-info {
-    margin: 1rem;
-    align-self: center;
-  }
-  .modal .modal-content .portafolio-modal .portafolio-info h3 {
-    margin: 0;
-  }
-  .modal .modal-content .portafolio-modal .portafolio-info p {
-    margin: 1rem 0;
-  }
-
-  .modal .modal-content .portafolio-modal .carrousel {
-    max-height: none;
-  }
-  .modal .modal-content .portafolio-modal .carrousel .slides {
-    height: 100%;
-  }
-}
-/* Media queries para escritorio */
-@media screen and (min-width: 1024px) {
-  main .portafolio .contenedor {
-    display: grid;
-    grid-template-columns: repeat(3, 32%);
-    justify-content: space-around;
-    align-items: center;
-  }
-  main .portafolio .contenedor .section-title {
-    grid-column: span 3;
-    margin-top: 4rem;
-  }
-}
 .modal {
   position: fixed;
   top: 0;
@@ -658,6 +603,61 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
   color: #dc143c;
 }
 
+/* Media queries para tablet */
+@media screen and (min-width: 768px) {
+  main .portafolio .contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-around;
+    align-items: center;
+  }
+  main .portafolio .contenedor .section-title {
+    grid-column: span 2;
+  }
+
+  .modal .modal-content .portafolio-modal {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+  }
+  .modal .modal-content .portafolio-modal img {
+    width: 50%;
+    height: 100%;
+  }
+  .modal .modal-content .portafolio-modal .portafolio-info {
+    margin: 1rem;
+    align-self: center;
+  }
+  .modal .modal-content .portafolio-modal .portafolio-info h3 {
+    margin: 0;
+  }
+  .modal .modal-content .portafolio-modal .portafolio-info p {
+    margin: 1rem 0;
+  }
+
+  .modal .modal-content .portafolio-modal .carrousel {
+    max-height: none;
+  }
+  .modal .modal-content .portafolio-modal .carrousel .slides {
+    height: 100%;
+  }
+}
+/* Media queries para escritorio */
+@media screen and (min-width: 1024px) {
+  main .portafolio .contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    justify-content: space-around;
+    align-items: center;
+  }
+  main .portafolio .contenedor .section-title {
+    grid-column: span 3;
+    margin-top: 4rem;
+  }
+}
 @keyframes carousel-slide {
   /* Comparte el mismo porcentaje que el comentario de abajo de DIVISION*/
   0% {
