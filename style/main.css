@@ -428,10 +428,6 @@ main .about .contenedor-skills .skills .tecnologias:hover {
     width: 70%;
     margin: 0 auto;
   }
-  main .about .contenedor-skills .skills .tecnologias {
-    width: 6.5rem;
-    height: 6.5rem;
-  }
 }
 @media screen and (min-width: 1024px) {
   main .about {
