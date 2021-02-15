@@ -573,7 +573,7 @@ main .portafolio .contenedor .portafolio-card:hover .portafolio-card-info {
   object-fit: fill;
   object-position: center;
   box-sizing: border-box;
-  padding: 0.75rem;
+  padding: 0 0.75rem;
 }
 .modal .modal-content .portafolio-modal .carrousel .carrousel-btns {
   position: absolute;
