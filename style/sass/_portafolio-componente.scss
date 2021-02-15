@@ -160,8 +160,10 @@ main .portafolio .contenedor{
           /* Por cada foto (igual que arriba), lo debes dividir al 100%, es decir como tenemos 5 fotos en el slide, ponemos 20%*/
           width: 20%; //25
           height: inherit;
-          object-fit: contain; //fil
+          object-fit: fill; //contain
           object-position: center;
+          box-sizing: border-box;
+          padding: .75rem;
         }
       }
 
