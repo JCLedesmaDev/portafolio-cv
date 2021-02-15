@@ -169,7 +169,7 @@ p {
 
 .sub-section-title {
   display: inline-block;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   padding: 0.75rem 0 0.25rem 0;
   border-bottom: 2px solid #dc143c;
@@ -381,7 +381,7 @@ main .about .titulo::before {
   height: 0.2rem;
   background-color: #333;
 }
-main .about .skills {
+main .about .contenedor-skills .skills {
   display: grid;
   grid-template-columns: repeat(3, 30%);
   justify-content: space-between;
@@ -389,38 +389,50 @@ main .about .skills {
   grid-column-gap: 0.75rem;
   grid-row-gap: 1rem;
 }
-main .about .skills h3 {
+main .about .contenedor-skills .skills h3 {
   grid-column: span 3;
   font-size: 1.2rem;
 }
-main .about .skills .tecnologias {
+main .about .contenedor-skills .skills .tecnologias {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 6.5rem;
-  height: 6.5rem;
+  margin: 0 auto;
+  width: 6.2rem;
+  height: 6.2rem;
   border-radius: 1rem;
   transition: transform 0.4s ease;
 }
-main .about .skills .tecnologias img {
+main .about .contenedor-skills .skills .tecnologias img {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
 }
-main .about .skills .tecnologias p {
+main .about .contenedor-skills .skills .tecnologias p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 1rem auto;
   font-size: 1.15rem;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
-main .about .skills .tecnologias p span {
+main .about .contenedor-skills .skills .tecnologias p span {
   background-color: #f0db4f;
 }
-main .about .skills .tecnologias:hover {
+main .about .contenedor-skills .skills .tecnologias:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
 
+@media screen and (min-width: 768px) {
+  main .about .contenedor-skills {
+    width: 70%;
+    margin: 0 auto;
+  }
+  main .about .contenedor-skills .skills .tecnologias {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
 @media screen and (min-width: 1024px) {
   main .about {
     display: grid;
@@ -434,6 +446,9 @@ main .about .skills .tecnologias:hover {
   }
   main .about .article-space {
     margin-bottom: 0;
+  }
+  main .about .contenedor-skills {
+    width: 100%;
   }
 }
 main .portafolio .contenedor h2 {
