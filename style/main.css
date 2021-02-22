@@ -396,8 +396,8 @@ main .about .contenedor-skills .skills h3 {
 main .about .contenedor-skills .skills .tecnologias {
   display: flex;
   margin: 0 auto;
-  width: 6.2rem;
-  height: 6.2rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 1rem;
   transition: transform 0.4s ease;
 }
