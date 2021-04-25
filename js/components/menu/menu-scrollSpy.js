@@ -5,24 +5,27 @@ export function menu_Scroll_Spy() {
 
   const cb = (entries)=>{
 
-    entries.forEach(entry =>{
+    entries.forEach((entry) =>{
 
       //Traemos el "id" de cada elemento seccion
       const id = entry.target.getAttribute("id");
+      const enlace = document.querySelector(`a[data-scroll-spy][href="#${id}"]`)
+
+
+      console.log(id)
 
       if (entry.isIntersecting) {
 
-        document.querySelector(`a[data-scroll-spy][href="#${id}"]`).classList.add("active")
+        enlace.classList.add("active")
 
       }else{
-
-        document.querySelector(`a[data-scroll-spy][href="#${id}"]`).classList.remove("active")
-
+        enlace.classList.remove("active")
       }
 
     })
 
   }
+
 
   const observer = new IntersectionObserver(cb, {
 

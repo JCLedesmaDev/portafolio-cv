@@ -65,12 +65,12 @@ header nav{
         color: $color-naranja;
         font-weight: 500;
 
-        &:hover,
-        &.active{
-          color: $color-blanco;
-          background-color: $color-principal;
-          font-weight: 600;
-        }
+          &:hover,
+          &.active{
+            color: $color-blanco;
+            background-color: $color-principal;
+            font-weight: 600;
+          }
       }
 
       &.is-active{

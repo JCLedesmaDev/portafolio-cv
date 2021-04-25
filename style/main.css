@@ -395,9 +395,11 @@ main .about .contenedor-skills .skills h3 {
 }
 main .about .contenedor-skills .skills .tecnologias {
   display: flex;
+  flex-direction: column;
   margin: 0 auto;
-  width: 6rem;
-  height: 6rem;
+  margin-top: 1rem;
+  width: 5.25rem;
+  height: 5.25rem;
   border-radius: 1rem;
   transition: transform 0.4s ease;
 }
@@ -408,6 +410,7 @@ main .about .contenedor-skills .skills .tecnologias img {
 }
 main .about .contenedor-skills .skills .tecnologias p {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin: 1rem auto;
@@ -420,7 +423,25 @@ main .about .contenedor-skills .skills .tecnologias p span {
 }
 main .about .contenedor-skills .skills .tecnologias:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.075);
+}
+main .about .contenedor-skills .skills .tecnologias .title-tecnologias {
+  position: relative;
+  display: none;
+}
+main .about .contenedor-skills .skills .tecnologias .title-tecnologias p {
+  position: absolute;
+  top: -1.25rem;
+  width: 5.25rem;
+  height: 1rem;
+  background-color: #dc143c;
+  border-radius: 1rem;
+  margin: 0 auto;
+  font-size: 13px;
+  color: #fff;
+}
+main .about .contenedor-skills .skills .tecnologias:hover .title-tecnologias {
+  display: block;
 }
 
 @media screen and (min-width: 768px) {
