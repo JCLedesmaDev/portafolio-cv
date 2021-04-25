@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", (e) =>{
   sliderCarrusel("#carrousel-1");
   sliderCarrusel("#carrousel-2");
   sliderCarrusel("#carrousel-3");
+  sliderCarrusel("#carrousel-4");
   modal();
 
   formContact()
